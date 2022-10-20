@@ -1,10 +1,10 @@
 // CSS Import
 import classes from './PageResume.module.css';
 
+import ResumeContent from '../../../../Content/ResumeContent/ResumeContent';
+
 const PageResume = (props: unknown) => {
-	return (
-		<p>Page Resume</p>
-	)
+	return (<section><ResumeContent /></section>);
 }
 
 export default PageResume;

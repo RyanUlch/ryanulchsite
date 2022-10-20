@@ -23,7 +23,6 @@ function App() {
 		// nicer in mobile view if the page is too thin.
 		
 		// displaymode: 0 = Landscape Mobile mode, 1 = Portrait Mobile mode, 2 = Desktop Mode
-
 		const [display, setDisplay] = useState({ mode: -1 });
 
 		// Sets the display mode based on clients window, should be updated for anychange in height/width/orientation

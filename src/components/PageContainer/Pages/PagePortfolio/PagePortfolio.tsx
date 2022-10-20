@@ -1,10 +1,10 @@
 // CSS Import
 import classes from './PagePortfolio.module.css';
 
+import PortfolioContent from '../../../../Content/PortfolioContent/PortfolioContent';
+
 const PagePortfolio = (props: unknown) => {
-	return (
-		<p>Page Portfolio</p>
-	)
+	return (<section><PortfolioContent /></section>);
 }
 
 export default PagePortfolio;

@@ -1,10 +1,10 @@
 // CSS Import
 import classes from './LittleHeader.module.css';
 
+import HeaderContent from '../../Content/HeaderContent/HeaderContent';
+
 const LittleHeader = (props: unknown) => {
-	return (
-		<p>LittleHeader</p>
-	)
+	return (<header><HeaderContent /></header>);
 }
 
 export default LittleHeader;
