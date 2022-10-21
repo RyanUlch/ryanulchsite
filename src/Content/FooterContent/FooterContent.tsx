@@ -1,9 +1,9 @@
 // CSS Import
 import classes from './FooterContent.module.css';
 
-const FooterContent = (props: unknown) => {
+const FooterContent = (props: any) => {
 	return (
-		<h6>Footer Content</h6>
+		<h6 className={props.footerTitle}>Footer Content</h6>
 	)
 }
 

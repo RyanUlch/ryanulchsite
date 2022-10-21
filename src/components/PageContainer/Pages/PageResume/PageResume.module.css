@@ -1,3 +1,11 @@
 .article_resume {
 	
 }
+
+
+@media (max-height: 400) and (orientation: landscape) {
+	.page {
+		display: flex;
+		flex-direction: row;
+	}
+}
