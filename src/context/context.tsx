@@ -5,7 +5,7 @@ import { createContext, useState, useEffect } from 'react';
 
 const Provider = (props: any) => {
 	// The height/width at which site switches from wide more to slim mode
-	const wideWidth		= '400px';
+	const wideWidth		= '450px';
 	const highHeight	= '400px';
 
 	// Use matchMedia.matches to query client

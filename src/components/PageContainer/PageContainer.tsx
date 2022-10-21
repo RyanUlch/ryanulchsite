@@ -11,13 +11,12 @@ import PageSelector from './Pages/PageSelector';
 const PageContainer = (props: { mode: Number }) => {
 
 	return (
-		<>
-		<p>Page Container</p>
+		<main>
 			{props.mode === 2 
 				? <PageSelector />
-				: <><PageResume /><PageBreaker /><PagePortfolio /><PageBreaker /><PageContact /></>
+				: <div className={classes.content}><PageResume /><PageBreaker /><PagePortfolio /><PageBreaker /><PageContact /></div>
 			}
-		</>
+		</main>
 	)
 }
 

@@ -1,9 +1,9 @@
 // CSS Import
 import classes from './HeaderContent.module.css';
 
-const HeaderContent = (props: unknown) => {
+const HeaderContent = (props: any) => {
 	return (
-		<h1>Header Content</h1>
+		<h1 className={`${props.headerTitle}`}>Header Content</h1>
 	)
 }
 

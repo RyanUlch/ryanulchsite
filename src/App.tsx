@@ -13,7 +13,6 @@ import PageContainer from './components/PageContainer/PageContainer';
 
 function App() {
 	const ctx = useContext(Context);
-	console.log('rerender')
 	// A note on displayMode //
 		// display mode is calculated using the clients browsers height,
 		// width and if it's in landscape/portrait. The client will view one
@@ -37,13 +36,12 @@ function App() {
 
 	}, [ctx.isHigh, ctx.isWide, ctx.isLand]);
 
-	console.log(ctx.isHigh);
 
 	return (
-		<>
+		<div className='page'>
 			{display.mode > 0 && <><LittleHeader /><PageContainer {...display}/><LittleFooter /></>}
 			{display.mode === 0 && <><SideHeader /><PageContainer {...display}/><SideFooter /></>}
-		</>
+		</div>
 	);
 }
 

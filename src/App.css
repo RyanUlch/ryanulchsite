@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
+/* CSS Variables to ensure consistant colors/styles throughout app*/
+@media(prefers-color-scheme: light) {
+	:root {
+		--colorMain: #004799;
+		--colorSecond: #6b8826;
+		--colorTertiary: #3861e9;
+		--colorDropShadow: #002a5a;
+		--textMain: #000000;
+		--textInvert: #ffffff;
+	}
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@media(prefers-color-scheme: dark) {
+	:root {
+		--colorMain: #004799;
+		--colorSecond: #6b8826;
+		--colorTertiary: #3861e9;
+		--colorDropShadow: #002a5a;
+		--textMain: #ffffff;
+		--textInvert: #000000;
+	}
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.page {
+	display: flex;
+	flex-direction: var(--direction);
+	flex-wrap: nowrap;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Side Scroll Mode */
+@media(max-height: 399px) and (orientation: landscape) {
+	:root {
+		--direction: row;
+	}
+
+	body {
+		background-color: rgb(255, 187, 187);
+		height: 100vmin;
+		width:100vmax;
+		overflow-y: hidden;
+		overflow-x: scroll;
+	}
 }
 
-.App-link {
-  color: #61dafb;
+/* Mobile Mode */
+@media(max-width: 449px) {
+	:root {
+		--direction: column;
+	}
+
+	body {
+		background-color: rgb(98, 129, 98);
+		height: 100vmax;
+		overflow-y: scroll;
+		overflow-x: hidden;
+	}
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Maybe Temp, using for nicer transition from modes */
+body {
+	transition: background-color 400ms ease;
+}
+
+/* Desktop Mode */
+@media(min-width: 450px) and (min-height: 400px) {
+	:root {
+		--direction: column;
+	}
+
+	body {
+		background-color:rgb(185, 185, 255);
+		width: 80vw;
+		margin: 0 auto;
+		height: 100vh;
+		width: 80vw;
+		overflow-y: hidden;
+		overflow-x: hidden;
+	}
+}
+
+
+/* React Transitions */
+
+/* Desktop Mode - Page Change */
+.page-enter .all {
+	transform: translateY(-100vh);
+}
+.page-enter-active .all {
+	transform: translateY(0);
+	transition: transform 400ms ease-in;
+}
+.page-exit .all {
+	transform: translateY(0);
+}
+
+.page-exit-active .all {
+	transform: translateY(-100vh);
+	transition: transform 200ms ease-out;
 }
