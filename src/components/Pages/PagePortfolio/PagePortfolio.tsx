@@ -1,10 +1,10 @@
 // CSS Import
-import classes from './PortfolioContent.module.css';
+import classes from './PagePortfolio.module.css';
 
-const PortfolioContent = (props: any) => {
+const PagePortfolio = (props: unknown) => {
 	return (
-		<>
-			<h2 className={classes.h2}>Portfolio</h2>
+		<section>
+			<h2>Portfolio</h2>
 			<article>
 				<h3>Food-Groups.com</h3>
 				<p>My first big React project. Food-Groups is a recipe sharing site with user curated recipes. Although it does have a group that everyone automatically joins; it's main purpose is for families/friends to share recipes with each other.</p>
@@ -13,7 +13,7 @@ const PortfolioContent = (props: any) => {
 				<p>Technologies Used: [React] [Javascript] [CSS] [HTML] [Node.js] [MySQL]</p>
 				<p>Skills Used: [Full-Stack Development] [Database Management] [Security (password hashing)] [User Content Management] [Session Storage] [Component Based-Libraries]</p>
 				<p>Public github links: <a href='https://github.com/RWACU/FoodGroups'>Client</a> <a href='https://github.com/RWACU/FoodGroupsServer'>Server</a></p>
-				<img className={`${props.img_portfolio}`}src='#' alt=''/>
+				<img src='#' alt=''/>
 			</article>
 			<article>
 				<h3>This Site!</h3>
@@ -26,10 +26,10 @@ const PortfolioContent = (props: any) => {
 				<p>Technologies Used: [React] [Typescript] [Javascript] [CSS] [HTML]</p>
 				<p>Skills Used: [Front-End] [Responsive Design] [Type Handling]</p>
 				<p>Public github link: <a href='https://github.com/RWACU/FoodGroups'>Client</a></p>
-				<img className={`${props.img_portfolio}`}src='#' alt=''/>
+				<img src='#' alt=''/>
 			</article>
-		</>
+		</section>
 	);
 }
 
-export default PortfolioContent;
+export default PagePortfolio;

@@ -1,0 +1,32 @@
+.header {
+	width: var(--bodyWidth);
+	height: var(--breakerHeight);
+	transform: skew(0, var(--skew)) scale(1.1) rotate(var(--rotate)) translateX(var(--paddingOffset));
+	border-radius: var(--border-radius);
+	position: fixed;
+	top: 2rem;
+	text-align: center;
+	background-color: var(--colorMain);
+	z-index: 1;
+	overflow: hidden;
+	box-shadow: var(--boxShadow);
+}
+
+.span {
+	display: inline;
+	overflow-wrap: hidden;
+	display: var(--hide);
+}
+
+.h1 {
+	transform: skew(calc(var(--skew)*-1), calc(var(--skew)*-1)) translateY(0%);
+	position: fixed;
+	top: 0;
+	margin: 10px auto;
+	width: var(--bodyWidth);
+	font-size: 2.5rem;
+	padding: 0 20px;
+	text-overflow: clip;
+	overflow-wrap: hidden;
+	line-height: 2;
+}

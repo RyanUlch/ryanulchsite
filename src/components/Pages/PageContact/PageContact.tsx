@@ -1,9 +1,11 @@
 // CSS Import
-import classes from './ContactContent.module.css';
+import classes from './PageContact.module.css';
 
-const ContactContent = (props: any) => {
+import { useState } from 'react';
+
+const PageContact = (props: unknown) => {
 	return (
-		<>
+		<section>
 			<h2>Contact Me</h2>
 			<article>
 				<p>I reside in Columbus, Ohio. I can only accept jobs that are either local to the area, or are 100% work-from-home currently</p>
@@ -15,8 +17,8 @@ const ContactContent = (props: any) => {
 				<p>Please note, I am currently available for freelance work.</p>
 				<img src='#' alt=''/>
 			</article>
-		</>
+		</section>
 	);
 }
 
-export default ContactContent;
+export default PageContact;

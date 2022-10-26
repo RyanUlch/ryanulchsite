@@ -1,12 +1,12 @@
 // CSS Import
-import PageBreaker from './PageBreaker/PageBreaker';
+import PageBreaker from '../PageBreaker/PageBreaker';
 import classes from './PageContainer.module.css';
 
-import PageContact from './Pages/PageContact/PageContact';
-import PagePortfolio from './Pages/PagePortfolio/PagePortfolio';
-import PageResume from './Pages/PageResume/PageResume';
+import PageContact from '../Pages/PageContact/PageContact';
+import PagePortfolio from '../Pages/PagePortfolio/PagePortfolio';
+import PageResume from '../Pages/PageResume/PageResume';
 
-import PageSelector from './Pages/PageSelector';
+import PageSelector from '../Pages/PageSelector';
 
 const PageContainer = (props: { mode: Number }) => {
 

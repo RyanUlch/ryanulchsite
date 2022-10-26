@@ -1,11 +1,8 @@
 // CSS Import
 import classes from './PageBreaker.module.css';
 
-const PageBreaker = (props: unknown) => {
-
-	return (
-		<hr />
-	)
+const PageBreaker = () => {
+	return (<div className={classes.pageBreaker} />);
 }
 
 export default PageBreaker;

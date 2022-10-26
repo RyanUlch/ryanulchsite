@@ -1,0 +1,15 @@
+.footer {
+	width: var(--bodyWidth);
+	height: calc(var(--font-size));
+	transform: translateX(var(--paddingOffset));
+	position: fixed;
+	bottom: 0;
+	text-align: center;
+	background-color: var(--colorMain);
+	z-index: 1;
+	overflow: hidden;
+}
+
+.h6 {
+	transform: skew(-20deg);
+}

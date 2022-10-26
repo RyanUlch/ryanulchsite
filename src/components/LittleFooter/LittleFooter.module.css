@@ -1,9 +1,0 @@
-.footerTitle {
-	text-align: center;
-	background-color: var(--colorMain);
-	z-index: 1;
-	display:block;
-	position: absolute;
-	bottom: 0;
-	width: 80vw;
-}

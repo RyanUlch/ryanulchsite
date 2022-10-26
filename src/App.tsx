@@ -1,15 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
 
 import { useContext, useEffect, useState } from 'react';
 
-import LittleHeader from './components/LittleHeader/LittleHeader';
-import SideHeader from './components/SideHeader/SideHeader';
-import LittleFooter from './components/LittleFooter/LittleFooter';
-import SideFooter from './components/SideFooter/SideFooter';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 import { Context } from './context/context';
 import PageContainer from './components/PageContainer/PageContainer';
+import PageResume from './components/Pages/PageResume/PageResume';
+import PagePortfolio from './components/Pages/PagePortfolio/PagePortfolio';
+import PageContact from './components/Pages/PageContact/PageContact';
+import PageBreaker from './components/PageBreaker/PageBreaker';
 
 function App() {
 	const ctx = useContext(Context);
@@ -36,11 +37,17 @@ function App() {
 
 	}, [ctx.isHigh, ctx.isWide, ctx.isLand]);
 
-
 	return (
 		<div className='page'>
-			{display.mode > 0 && <><LittleHeader /><PageContainer {...display}/><LittleFooter /></>}
-			{display.mode === 0 && <><SideHeader /><PageContainer {...display}/><SideFooter /></>}
+			<Header />
+			<main>
+				<PageResume />
+				<PageBreaker />
+				<PagePortfolio />
+				<PageBreaker />
+				<PageContact />
+			</main>
+			<Footer />
 		</div>
 	);
 }

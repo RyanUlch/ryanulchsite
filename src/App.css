@@ -7,6 +7,7 @@
 		--colorDropShadow: #002a5a;
 		--textMain: #000000;
 		--textInvert: #ffffff;
+		--bodyBackground: #777777;
 	}
 }
 
@@ -18,63 +19,83 @@
 		--colorDropShadow: #002a5a;
 		--textMain: #ffffff;
 		--textInvert: #000000;
+		--bodyBackground: #777777;
 	}
+}
+
+:root {
+	--bodyWidth: min(100%, 1000px);
+	--pagePadding: min(2vw, 20px);
+	--paddingOffset: calc(-1*(var(--pagePadding)));
+	/* --font-size: clamp(1rem, 2.5vw, 1.75rem); */
+	--headerFooterOffset: calc(var(--font-size)*2.5);
+	--border: 6px solid var(--colorSecond);
+	--border-radius: 5px;
+	--boxShadow: 0 10px 10px var(--colorDropShadow);
+	--skew: 2deg;
+	--breakerHeight: 6rem;
+}
+
+body {
+	width: 100vw;
+	height: 100vmax;
+	font-size: var(--font-size);
+	overflow-y: var(--overY);
+	overflow-x: var(--overX);
+	margin-right: var(--bodyMarginRight);
+	padding-top: 0;
+	padding-bottom: var(--headerFooterOffset);
+	background-color: var(--bodyBackground);
+	text-align: center;
 }
 
 .page {
-	display: flex;
-	flex-direction: var(--direction);
-	flex-wrap: nowrap;
+	background-color: var(--colorTertiary);
+	width: min(100%, 1000px);
+	margin: 0 auto;
+	padding: var(--pagePadding);
+	padding-top: calc(var(--breakerHeight)*1.5);
+	padding-right: calc(var(--pagePadding)*2);
 }
+
+/* Page Size/Orientation specific variables */
 
 /* Side Scroll Mode */
-@media(max-height: 399px) and (orientation: landscape) {
+ @media(max-height: 399px) and (orientation: landscape) {
 	:root {
 		--direction: row;
+		--overX: scroll;
+		--overX: hidden;
+		--rotate: 0.25turn;
+		--bodyMarginRight: 0;
+		--font-size: clamp(1rem, 2.5vw, 1.75rem);
+		--hide: none;
 	}
-
-	body {
-		background-color: rgb(255, 187, 187);
-		height: 100vmin;
-		width:100vmax;
-		overflow-y: hidden;
-		overflow-x: scroll;
-	}
-}
+} 
 
 /* Mobile Mode */
-@media(max-width: 449px) {
+@media(max-width: 600px) {
 	:root {
 		--direction: column;
+		--overX: hidden;
+		--overY: scroll;
+		--rotate: 0turn;
+		--bodyMarginRight: 0;
+		--font-size: clamp(0.5rem, 1rem, 1.5rem);
+		--hide: none;
 	}
-
-	body {
-		background-color: rgb(98, 129, 98);
-		height: 100vmax;
-		overflow-y: scroll;
-		overflow-x: hidden;
-	}
-}
-
-/* Maybe Temp, using for nicer transition from modes */
-body {
-	transition: background-color 400ms ease;
 }
 
 /* Desktop Mode */
 @media(min-width: 450px) and (min-height: 400px) {
 	:root {
 		--direction: column;
-	}
-
-	body {
-		background-color:rgb(185, 185, 255);
-		width: 80vw;
-		margin: 0 auto;
-		height: 100vh;
-		width: 80vw;
-		overflow-y: hidden;
-		overflow-x: hidden;
+		--overX: hidden;
+		--overY: scroll;
+		--rotate: 0turn;
+		--bodyMarginRight: calc(100vw - 100%);
+		--font-size: clamp(1rem, 2.5vw, 1.75rem);
+		--hide: inherit;
 	}
 }
 
@@ -82,7 +103,7 @@ body {
 /* React Transitions */
 
 /* Desktop Mode - Page Change */
-.page-enter .all {
+/* .page-enter .all {
 	transform: translateY(-100vh);
 }
 .page-enter-active .all {
@@ -96,4 +117,20 @@ body {
 .page-exit-active .all {
 	transform: translateY(-100vh);
 	transition: transform 200ms ease-out;
+} */
+
+
+
+
+section {
+	display: flex;
+	flex-direction: var(--direction);
+}
+
+article {
+	background-color: var(--colorSecond);
+	border-radius: var(--border-radius);
+	padding: var(--pagePadding);
+	margin: 10px;
+	box-shadow: var(--boxShadow);
 }

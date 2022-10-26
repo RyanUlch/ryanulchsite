@@ -1,9 +1,0 @@
-.headerTitle {
-	background-color: var(--colorMain);
-	display: flex;
-	flex-direction: column;
-	writing-mode: vertical-lr;
-	height: 100%;
-	text-align: center;
-	transform: scale(-1, -1);
-}
