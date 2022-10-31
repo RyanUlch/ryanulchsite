@@ -1,15 +1,47 @@
 .footer {
 	width: var(--bodyWidth);
-	height: calc(var(--font-size));
-	transform: translateX(var(--paddingOffset));
+	height: calc(var(--breakerHeight)*0.5);
+	transform: skew(0, var(--skew)) scale(1.1) rotate(var(--rotate)) translateY(95%);
+	border-radius: var(--border-radius) var(--border-radius) 0 0;
 	position: fixed;
-	bottom: 0;
+	bottom: 2rem;
 	text-align: center;
 	background-color: var(--colorMain);
-	z-index: 1;
-	overflow: hidden;
+	z-index: 3;
+	/* overflow: hidden; */
+	box-shadow: var(--boxShadow);
+}
+
+.span {
+	display: inline;
+	overflow-wrap: hidden;
+	display: var(--hide);
 }
 
 .h6 {
-	transform: skew(-20deg);
+	transform: skew(var(--antiSkew), var(--antiSkew)) translateY(-15%);
+	position: fixed;
+	bottom: 0;
+	margin: 10px auto;
+	width: var(--bodyWidth);
+	font-size: 1rem;
+	padding: 0 20px;
+	text-overflow: clip;
+	overflow-wrap: hidden;
+	line-height: 2;
+	color: var(--textInvert);
+}
+
+.footerBackground {
+	width: calc(var(--bodyWidth)*1.04);
+	height: calc(var(--breakerHeight)*0.5);
+	transform: scale(0.95) skew(0, var(--skew)) scale(1.1) rotate(var(--rotate)) translateX(var(--paddingOffset)) translateY(70%);
+	border-radius: var(--border-radius);
+	position: fixed;
+	bottom: 2rem;
+	text-align: center;
+	background-color: var(--colorTertiary);
+	z-index: 1;
+	overflow: hidden;
+	box-shadow: var(--boxShadow);
 }

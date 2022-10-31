@@ -12,6 +12,9 @@ import PagePortfolio from './components/Pages/PagePortfolio/PagePortfolio';
 import PageContact from './components/Pages/PageContact/PageContact';
 import PageBreaker from './components/PageBreaker/PageBreaker';
 
+import {CSSTransition} from 'react-transition-group';
+import {useRef} from 'react';
+
 function App() {
 	const ctx = useContext(Context);
 	// A note on displayMode //
@@ -37,14 +40,24 @@ function App() {
 
 	}, [ctx.isHigh, ctx.isWide, ctx.isLand]);
 
+	const [isLightTheme, setIsLightTheme] = useState(window.matchMedia("(prefers-color-scheme: dark)").matches);
+
+	useEffect(() => {
+		if (isLightTheme) {
+			document.documentElement.setAttribute("data-theme", "light");
+		} else {
+			document.documentElement.setAttribute("data-theme", "dark");
+		}
+	}, [isLightTheme]);
+
 	return (
-		<div className='page'>
-			<Header />
-			<main>
+		<div className='page' >
+			<Header onThemeChange={setIsLightTheme}/>
+			<main id='resume'>
 				<PageResume />
-				<PageBreaker />
+				<div id='port' className='anchor'></div>
 				<PagePortfolio />
-				<PageBreaker />
+				<div id='cont' className='anchor'></div>
 				<PageContact />
 			</main>
 			<Footer />
@@ -53,3 +66,5 @@ function App() {
 }
 
 export default App; 
+
+

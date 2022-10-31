@@ -1,61 +1,81 @@
 /* CSS Variables to ensure consistant colors/styles throughout app*/
-@media(prefers-color-scheme: light) {
-	:root {
-		--colorMain: #004799;
-		--colorSecond: #6b8826;
-		--colorTertiary: #3861e9;
-		--colorDropShadow: #002a5a;
-		--textMain: #000000;
-		--textInvert: #ffffff;
-		--bodyBackground: #777777;
-	}
+
+:root {
+	--colorMain: #4960e6;
+	--colorSecond: #3aa9e0;
+	--colorTertiary: #c9b243;
+	--colorDropShadow: #4e4e4e;
+	--textMain: #202020;
+	--textInvert: #1a1a1a;
+	--bodyBackground: #bbefff;
+
+	--colorBtnHover: #2a7ca5;
+	--colorBtnActive: #537b8f;
 }
 
-@media(prefers-color-scheme: dark) {
-	:root {
-		--colorMain: #004799;
-		--colorSecond: #6b8826;
-		--colorTertiary: #3861e9;
-		--colorDropShadow: #002a5a;
-		--textMain: #ffffff;
-		--textInvert: #000000;
-		--bodyBackground: #777777;
-	}
+[data-theme="dark"] {
+	--colorMain: #212c69;
+	--colorSecond: #1f5b79;
+	--colorTertiary: #645921;
+	--colorDropShadow: #131313;
+	--textMain: #d6d6d6;
+	--textInvert: #e0e0e0;
+	--bodyBackground: #161b1d;
+	--colorBtnHover: #164157;
+	--colorBtnActive: #23333b;
 }
 
 :root {
 	--bodyWidth: min(100%, 1000px);
+	--sectionWidth: max(100%, 1000px);
+	--seperatePadding: 20px;
 	--pagePadding: min(2vw, 20px);
 	--paddingOffset: calc(-1*(var(--pagePadding)));
-	/* --font-size: clamp(1rem, 2.5vw, 1.75rem); */
+	--font-size: clamp(1rem, 2.5vw, 1.75rem);
 	--headerFooterOffset: calc(var(--font-size)*2.5);
 	--border: 6px solid var(--colorSecond);
 	--border-radius: 5px;
-	--boxShadow: 0 10px 10px var(--colorDropShadow);
+	--boxShadow: 3px 10px 10px var(--colorDropShadow);
 	--skew: 2deg;
+	--antiSkew: calc(var(--skew)*-1);
 	--breakerHeight: 6rem;
 }
 
 body {
-	width: 100vw;
-	height: 100vmax;
+	line-height: var(--lineHeight);
+	color: var(--textMain);
+	/* width: 100vw; */
+	/* height: 100vmax; */
 	font-size: var(--font-size);
 	overflow-y: var(--overY);
 	overflow-x: var(--overX);
-	margin-right: var(--bodyMarginRight);
+	/* margin-right: 500px; */
 	padding-top: 0;
 	padding-bottom: var(--headerFooterOffset);
 	background-color: var(--bodyBackground);
 	text-align: center;
+	/* transform: translateX(calc(var(--paddingOffset)/2)); */
+}
+
+h2 {
+	text-decoration: underline;
+	transform: skew(calc(var(--skew)*-1), calc(var(--skew)*-1)) translateY(25px);
+	font-size: 3rem;
+	text-shadow: 0 0 10px var(--colorSecond);
+}
+
+p {
+	padding: 10px 0;
 }
 
 .page {
-	background-color: var(--colorTertiary);
+	/* background-color: var(--colorTertiary); */
 	width: min(100%, 1000px);
 	margin: 0 auto;
-	padding: var(--pagePadding);
+	/* padding: var(--pagePadding); */
 	padding-top: calc(var(--breakerHeight)*1.5);
-	padding-right: calc(var(--pagePadding)*2);
+	padding-bottom: calc(var(--breakerHeight)*1.1);
+	/* padding-right: calc(var(--pagePadding)*1.4); */
 }
 
 /* Page Size/Orientation specific variables */
@@ -70,6 +90,7 @@ body {
 		--bodyMarginRight: 0;
 		--font-size: clamp(1rem, 2.5vw, 1.75rem);
 		--hide: none;
+		--lineHeight: 2rem;
 	}
 } 
 
@@ -83,6 +104,7 @@ body {
 		--bodyMarginRight: 0;
 		--font-size: clamp(0.5rem, 1rem, 1.5rem);
 		--hide: none;
+		--lineHeight: 2rem;
 	}
 }
 
@@ -96,6 +118,7 @@ body {
 		--bodyMarginRight: calc(100vw - 100%);
 		--font-size: clamp(1rem, 2.5vw, 1.75rem);
 		--hide: inherit;
+		--lineHeight: 2rem;
 	}
 }
 
@@ -119,18 +142,98 @@ body {
 	transition: transform 200ms ease-out;
 } */
 
-
-
-
-section {
-	display: flex;
-	flex-direction: var(--direction);
-}
-
 article {
 	background-color: var(--colorSecond);
 	border-radius: var(--border-radius);
-	padding: var(--pagePadding);
+	/* padding-left: var(--paddingOffset); */
+	padding: 10px 20px;
 	margin: 10px;
 	box-shadow: var(--boxShadow);
+	transform: skew(0, var(--antiSkew));
+	margin-bottom: 20px;
+}
+
+.background {
+	background-color: var(--colorTertiary);
+	/* width: var(--sectionWidth); */
+	height: 100%;
+	padding: var(--seperatePadding) 0;
+	transform: skew(0, var(--skew));
+	border-radius: var(--border-radius);
+	box-shadow: var(--boxShadow);
+}
+
+.anchor {
+	display: block;
+	position: relative;
+	top: -9rem;
+	visibility: hidden;
+}
+
+/* way off screen */
+.scrollbar-measure {
+	width: 100px;
+	height: 100px;
+	overflow: scroll;
+	position: absolute;
+	top: -9999px;
+}
+
+
+:root {
+	--expandHeightSmall: calc(var(--lineHeight)*4.4);
+	--expandHeightBig: auto;
+	--expandMaxHeight: 3000px;
+	--transitionOut: max-height 1000ms cubic-bezier(.17,1.2,.63,1.0);
+	--transitionIn: max-height 2000ms cubic-bezier(.17,1.2,.63,1.0);
+}
+
+.my-node-appear {
+	max-height: var(--expandHeightSmall);
+	overflow: hidden;
+}
+
+.my-node-appear-active {
+	max-height: var(--expandHeightSmall);
+	overflow: hidden;
+}
+
+.my-node-appear-done {
+	max-height: var(--expandHeightSmall);
+	overflow: hidden;
+}
+
+.my-node-exit {
+	max-height: var(--expandHeightSmall);
+	overflow: hidden;
+}
+
+.my-node-exit-active {
+	/* height: var(--expandHeightBig); */
+	max-height: var(--expandMaxHeight);
+	transition: var(--transitionIn);
+	overflow: hidden;
+}
+
+.my-node-exit-done {
+	/* height: var(--expandHeightBig); */
+	max-height: var(--expandMaxHeight);
+	overflow: hidden;
+}
+
+.my-node-enter {
+	/* height: var(--expandHeightBig); */
+	max-height: var(--expandMaxHeight);
+	overflow: hidden;
+}
+
+.my-node-enter-active {
+	max-height: var(--expandHeightSmall);
+	transition: var(--transitionOut);
+	overflow: hidden;
+}
+
+.my-node-enter-done {
+	max-height: var(--expandHeightSmall);
+	overflow: hidden;
 }

@@ -1,7 +1,5 @@
 .pageBreaker {
-	background-color: var(--bodyBackground);
 	height: var(--breakerHeight);
-	width: calc(var(--bodyWidth)*1.1);
-	transform: skew(var(--skew), var(--skew)) rotate(var(--rotate)) translate(calc(var(--paddingOffset)*1.1));
-	margin: 1rem 0;
+	transform: skew(var(--skew), var(--skew)) rotate(var(--rotate)) ;
+	margin: 1rem auto;
 }
