@@ -5,6 +5,19 @@ import { CSSTransition } from 'react-transition-group';
 
 const Expander = (props: any) => {
 	const [inProp, setInProp] = useState(true);
+
+	const handleExpand = (event: any) => {
+		event.preventDefault();
+		if (!inProp) {
+			const ele = document.getElementById(props.anchor);
+			const rect = ele?.getBoundingClientRect();
+			if (rect) {
+				window.scrollTo(0, window.scrollY+rect.y-200);
+			}
+		}
+		setInProp((state) => !state);
+	}
+
 	return (
 		<>
 			<CSSTransition appear={true} in={inProp} timeout={1000} classNames="my-node">
@@ -13,7 +26,7 @@ const Expander = (props: any) => {
 				</div>
 			</CSSTransition>
 			
-			<button className={classes.btn} type="button" onClick={() => setInProp((state) => !state)}>
+			<button className={classes.btn} type="button" onClick={handleExpand}>
 				{inProp ? 'Show More' : 'Show Less'}
 			</button>
 		</>
@@ -21,5 +34,3 @@ const Expander = (props: any) => {
 }
 
 export default Expander;
-
-//className={`${isExpanded ? classes.expandedArea : classes.collapsedArea} canExpand`

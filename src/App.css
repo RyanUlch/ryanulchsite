@@ -8,7 +8,7 @@
 	--textMain: #202020;
 	--textInvert: #1a1a1a;
 	--bodyBackground: #bbefff;
-
+	--linkColor: #073f00;
 	--colorBtnHover: #2a7ca5;
 	--colorBtnActive: #537b8f;
 }
@@ -23,6 +23,7 @@
 	--bodyBackground: #161b1d;
 	--colorBtnHover: #164157;
 	--colorBtnActive: #23333b;
+	--linkColor: #18ce00;
 }
 
 :root {
@@ -183,7 +184,7 @@ article {
 :root {
 	--expandHeightSmall: calc(var(--lineHeight)*4.4);
 	--expandHeightBig: auto;
-	--expandMaxHeight: 3000px;
+	--expandMaxHeight: 2000px;
 	--transitionOut: max-height 1000ms cubic-bezier(.17,1.2,.63,1.0);
 	--transitionIn: max-height 2000ms cubic-bezier(.17,1.2,.63,1.0);
 }
@@ -236,4 +237,9 @@ article {
 .my-node-enter-done {
 	max-height: var(--expandHeightSmall);
 	overflow: hidden;
+}
+
+a {
+	color: var(--linkColor);
+	cursor: pointer;
 }

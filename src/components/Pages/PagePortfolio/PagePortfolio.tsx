@@ -9,9 +9,9 @@ const PagePortfolio = (props: unknown) => {
 	return (
 		<section id='portfolio'>
 			<PageBreaker value='Portfolio' />
-			<div  className='background'>
-				<article>
-					<Expander>
+			<div className='background'>
+				<article id='foodGroups'>
+					<Expander anchor='foodGroups'>
 						<h3>Food-Groups.com</h3>
 						<p>My first big React project. Food-Groups is a recipe sharing site with user curated recipes. Although it does have a group that everyone automatically joins; it's main purpose is for families/friends to share recipes with each other.</p>
 						<p>I learned a lot while making this site. I was focussed more on the back end functions rather than the design as it needed to function well.</p>
@@ -22,8 +22,8 @@ const PagePortfolio = (props: unknown) => {
 						<img src='#' alt=''/>
 					</Expander>
 				</article>
-				<article>
-					<Expander>
+				<article id='ryanUlch'>
+					<Expander anchor='ryanUlch'>
 						<h3>This Site!</h3>
 						<p>This site is simply to showcase the projects I have worked on, as well as show that I can impliment CSS to properly create dynamic, responsive designs for multiple device sizes. As well as saying hi, to any potential employers. Hi!</p>
 						<p>I've learned having a clear understanding of how the responsiveness of a site should be front and center when first creating mock-ups of a site.</p>
