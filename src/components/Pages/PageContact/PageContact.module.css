@@ -1,0 +1,15 @@
+.map {
+	width: 100%;
+	height: 30vh;
+	border: 0;
+}
+
+.emailLink {
+	text-align: center;
+	width: 50%;
+	margin: 0 auto;
+}
+
+.p {
+	text-align: center;
+}

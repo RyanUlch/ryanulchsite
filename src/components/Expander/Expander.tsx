@@ -21,12 +21,12 @@ const Expander = (props: any) => {
 	return (
 		<>
 			<CSSTransition appear={true} in={inProp} timeout={1000} classNames="my-node">
-				<div className={classes.conatiner}>
+				<div className={classes.container}>
 					{props.children}
 				</div>
 			</CSSTransition>
 			
-			<button className={classes.btn} type="button" onClick={handleExpand}>
+			<button className={`${classes.btn} ${inProp ? classes.opened : classes.closed}`} type="button" onClick={handleExpand}>
 				{inProp ? 'Show More' : 'Show Less'}
 			</button>
 		</>

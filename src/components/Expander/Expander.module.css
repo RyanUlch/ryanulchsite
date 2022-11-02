@@ -1,8 +1,25 @@
 .btn {
-	background-color: transparent;
+	background-color: var(--colorTertiary);
+	margin: 10px;
+	padding: 5px;
 	color: var(--textMain);
 	border: 0;
-	width: 100%;
+	width: 80%;
 	text-decoration: underline;
 	cursor: pointer;
+	border-radius: var(--border-radius);
+	box-shadow: var(--boxShadow);
+
+}
+
+.container {
+	margin-bottom: 20px;
+}
+
+.opened {
+	background-color: var(--expandBtnOpened);
+}
+
+.closed {
+	background-color: var(--expandBtnClosed);
 }

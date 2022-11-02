@@ -1,9 +1,9 @@
 /* CSS Variables to ensure consistant colors/styles throughout app*/
 
 :root {
-	--colorMain: #4960e6;
-	--colorSecond: #3aa9e0;
-	--colorTertiary: #c9b243;
+	--colorMain: #4893b6;
+	--colorSecond: #88acbd;
+	--colorTertiary: #425c68;
 	--colorDropShadow: #4e4e4e;
 	--textMain: #202020;
 	--textInvert: #1a1a1a;
@@ -11,12 +11,14 @@
 	--linkColor: #073f00;
 	--colorBtnHover: #2a7ca5;
 	--colorBtnActive: #537b8f;
+	--expandBtnOpened: #073f00;
+	--expandBtnClosed: #3f0000;
 }
 
 [data-theme="dark"] {
-	--colorMain: #212c69;
-	--colorSecond: #1f5b79;
-	--colorTertiary: #645921;
+	--colorMain: #091972;
+	--colorSecond: #2a3572;
+	--colorTertiary: #2a5b72;
 	--colorDropShadow: #131313;
 	--textMain: #d6d6d6;
 	--textInvert: #e0e0e0;
@@ -24,6 +26,8 @@
 	--colorBtnHover: #164157;
 	--colorBtnActive: #23333b;
 	--linkColor: #18ce00;
+	--expandBtnOpened: #18ce00;
+	--expandBtnClosed: #ce0000;
 }
 
 :root {
@@ -40,22 +44,23 @@
 	--skew: 2deg;
 	--antiSkew: calc(var(--skew)*-1);
 	--breakerHeight: 6rem;
+	--expandHeightSmall: calc(var(--lineHeight)*4.4);
+	--expandHeightBig: auto;
+	--expandMaxHeight: 4000rem;
+	--transitionOut: max-height 1000ms cubic-bezier(.17,1.2,.63,1.0);
+	--transitionIn: max-height 2000ms cubic-bezier(.17,1.2,.63,1.0);
 }
 
 body {
 	line-height: var(--lineHeight);
 	color: var(--textMain);
-	/* width: 100vw; */
-	/* height: 100vmax; */
 	font-size: var(--font-size);
 	overflow-y: var(--overY);
 	overflow-x: var(--overX);
-	/* margin-right: 500px; */
 	padding-top: 0;
 	padding-bottom: var(--headerFooterOffset);
 	background-color: var(--bodyBackground);
 	text-align: center;
-	/* transform: translateX(calc(var(--paddingOffset)/2)); */
 }
 
 h2 {
@@ -65,23 +70,57 @@ h2 {
 	text-shadow: 0 0 10px var(--colorSecond);
 }
 
+h3 {
+	font-size: clamp(1rem, 5vw, 3rem);
+	margin-bottom: 20px;
+}
+
+h4 {
+	margin-top: 30px;
+}
+
 p {
 	padding: 10px 0;
+	text-align: left;
+}
+
+.imageContainer {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	
+}
+
+.displayImage {
+	min-width: 40px;
+	max-width: 33%;
+	background-color: var(--colorTertiary);
+	border-radius: var(--border-radius);
+	box-shadow: var(--boxShadow);
+	border: 1px solid var(--linkColor);
 }
 
 .page {
-	/* background-color: var(--colorTertiary); */
 	width: min(100%, 1000px);
 	margin: 0 auto;
-	/* padding: var(--pagePadding); */
 	padding-top: calc(var(--breakerHeight)*1.5);
-	padding-bottom: calc(var(--breakerHeight)*1.1);
-	/* padding-right: calc(var(--pagePadding)*1.4); */
+	padding-bottom: 20px;
+}
+
+.note {
+	display: block;
+	text-align: center;
+	font-size: 1rem;
+	background-color: var(--colorTertiary);
+	border-radius: var(--border-radius);
+	margin: 10px 0;
+	box-shadow: var(--boxShadow);
 }
 
 /* Page Size/Orientation specific variables */
 
-/* Side Scroll Mode */
+/* Side Scroll Mode
  @media(max-height: 399px) and (orientation: landscape) {
 	:root {
 		--direction: row;
@@ -93,7 +132,7 @@ p {
 		--hide: none;
 		--lineHeight: 2rem;
 	}
-} 
+}  */
 
 /* Mobile Mode */
 @media(max-width: 600px) {
@@ -110,7 +149,7 @@ p {
 }
 
 /* Desktop Mode */
-@media(min-width: 450px) and (min-height: 400px) {
+@media(min-width: 450px) {
 	:root {
 		--direction: column;
 		--overX: hidden;
@@ -124,24 +163,7 @@ p {
 }
 
 
-/* React Transitions */
 
-/* Desktop Mode - Page Change */
-/* .page-enter .all {
-	transform: translateY(-100vh);
-}
-.page-enter-active .all {
-	transform: translateY(0);
-	transition: transform 400ms ease-in;
-}
-.page-exit .all {
-	transform: translateY(0);
-}
-
-.page-exit-active .all {
-	transform: translateY(-100vh);
-	transition: transform 200ms ease-out;
-} */
 
 article {
 	background-color: var(--colorSecond);
@@ -181,14 +203,14 @@ article {
 }
 
 
-:root {
-	--expandHeightSmall: calc(var(--lineHeight)*4.4);
-	--expandHeightBig: auto;
-	--expandMaxHeight: 2000px;
-	--transitionOut: max-height 1000ms cubic-bezier(.17,1.2,.63,1.0);
-	--transitionIn: max-height 2000ms cubic-bezier(.17,1.2,.63,1.0);
+a {
+	color: var(--linkColor);
+	cursor: pointer;
 }
 
+
+
+/* React Transitions */
 .my-node-appear {
 	max-height: var(--expandHeightSmall);
 	overflow: hidden;
@@ -237,9 +259,4 @@ article {
 .my-node-enter-done {
 	max-height: var(--expandHeightSmall);
 	overflow: hidden;
-}
-
-a {
-	color: var(--linkColor);
-	cursor: pointer;
 }
