@@ -3,10 +3,15 @@ import classes from './Expander.module.css';
 import { useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 
-const Expander = (props: any) => {
+type props = {
+	anchor: string,
+	children?: React.ReactNode,
+};
+
+const Expander = (props: {anchor: string, children?: React.ReactNode}) => {
 	const [inProp, setInProp] = useState(true);
 
-	const handleExpand = (event: any) => {
+	const handleExpand = (event: React.MouseEvent<HTMLElement>) => {
 		event.preventDefault();
 		if (!inProp) {
 			const ele = document.getElementById(props.anchor);

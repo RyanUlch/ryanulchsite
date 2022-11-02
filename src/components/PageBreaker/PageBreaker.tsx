@@ -1,7 +1,7 @@
 // CSS Import
 import classes from './PageBreaker.module.css';
 
-const PageBreaker = (props: any) => {
+const PageBreaker = (props: {value: string}) => {
 	return (<div className={classes.pageBreaker}><h2>{props.value}</h2></div>);
 }
 

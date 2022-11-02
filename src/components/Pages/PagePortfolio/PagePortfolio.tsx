@@ -6,10 +6,10 @@ import Expander from '../../Expander/Expander';
 
 import { linker, linkSM } from '../../../helpers/linker';
 
-const PagePortfolio = (props: unknown) => {
-	const siteLinkHandler = (event: any) => {
+const PagePortfolio = () => {
+	const siteLinkHandler = (event: React.MouseEvent<HTMLElement>) => {
 		event.preventDefault();
-		alert(`This is a link for this site... What did you expect to happen?`);;
+		alert(`This is a link for this site... What did you expect to happen?`);
 	}
 
 	return (

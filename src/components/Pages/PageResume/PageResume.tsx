@@ -6,8 +6,7 @@ import Expander from '../../Expander/Expander';
 
 import { linker, linkSM } from '../../../helpers/linker';
 
-const PageResume = (props: any) => {
-
+const PageResume = () => {
 	return (
 		<section>
 			<PageBreaker value='Resumé'/>
@@ -15,6 +14,11 @@ const PageResume = (props: any) => {
 				<article id='about'>
 					<Expander anchor='about'>
 						<h3>About Me</h3>
+						<div className='imageContainer'>
+							<img className='displayImage' src='images/ryan4.jpg' alt='Me and my wife Lucy on my first day as an American immigrant'/>
+							<img className='displayImage' src='images/ryan2.jpg' alt='Me and our little black kitten' />
+							<img className='displayImage' src='images/ryan3.jpg' alt='Me with our kitten again. This time both of us being lazy'/>
+						</div>
 						<p>&emsp;&emsp;I am a self-taught programmer from Windsor, Canada. Interested in computers and technology since I was a little child; I went into Film and Television production naturally. I enjoyed the technical aspects of production; mostly camera operation and editing. They both gave me the ability to express myself artistically, while still adhering to conventions (and knowing when to buck conventions) to produce something that was uniquely me.</p>
 						<p>&emsp;&emsp;However, the job I got out of college involved none of that. I did get to work in a fast-paced office environment. Working on large-scale projects Quality-Controlling and encoding video for {linker('Crave.ca', 'https:crave.ca')} (Service not available outside of Canada) for almost 8 years.</p>
 						<p>&emsp;&emsp;I had started to learn {linkSM('c++')} programming around 2016. Creating two functional programs that my department used to allow a more efficient workflow.</p>
@@ -72,6 +76,9 @@ const PageResume = (props: any) => {
 							<ul>
 								<li>Being able to work under a time constraint, while handling customer and co-worker interactions, has allowed me to develop professional stress management skills to use time-pressure in a advantageous way</li>
 							</ul>
+							<div className='imageContainer'>
+								<img className='displayImage' src='images/ryanGraeters.jpg' alt="Me on my way for my first day at Graeter's" />
+							</div>
 						</section>
 						<hr />
 						<section className={classes.experienceSection}>

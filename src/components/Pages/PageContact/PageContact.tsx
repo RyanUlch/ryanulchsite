@@ -2,10 +2,8 @@
 import classes from './PageContact.module.css';
 
 import PageBreaker from '../../PageBreaker/PageBreaker';
-import Expander from '../../Expander/Expander';
 
-
-const PageContact = (props: unknown) => {
+const PageContact = () => {
 	return (
 		<section id='contact'>
 			<PageBreaker value='Contact Me' />

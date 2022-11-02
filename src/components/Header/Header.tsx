@@ -1,10 +1,10 @@
 // CSS Import
 import classes from './Header.module.css';
 
-const Header = (props: any) => {
+const Header = (props: {onThemeChange: ((state: (state: boolean) => boolean) => void)}) => {
 	const themeChangeHandler = (event: any) => {
 		event.preventDefault();
-		props.onThemeChange((state: any) => !state);
+		props.onThemeChange((state: boolean) => !state);
 	}
 
 	return (

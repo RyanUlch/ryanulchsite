@@ -1,7 +1,7 @@
 // CSS Import
 import classes from './Footer.module.css';
 
-const Footer = (props: unknown) => {
+const Footer = () => {
 	return (
 		<>
 			<div className={classes.footerBackground}></div>

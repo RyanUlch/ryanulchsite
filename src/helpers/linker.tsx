@@ -20,7 +20,7 @@ const links: linkType = {
 	'type':		['TypeScript', 								'https://www.typescriptlang.org/docs/'],
 	'resp':		['Responsive Design', 						'https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design'],
 	'aria':		['ARIA/Accessibility', 						'https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques'],
-	'strict':	['Scrict Typing', 							'https://www.infoworld.com/article/3538428/what-is-typescript-strongly-typed-javascript.html'],
+	'strict':	['Strict Typing', 							'https://www.infoworld.com/article/3538428/what-is-typescript-strongly-typed-javascript.html'],
 	'ecma':		['EMCAScript 6',							'http://es6-features.org/#Constants'],
 	'c++':		['C++', 									'https://en.cppreference.com/w/'],
 	'java':		['Java', 									'https://docs.oracle.com/en/java/'],
