@@ -6,7 +6,7 @@ const Footer = () => {
 		<>
 			<div className={classes.footerBackground}></div>
 			<footer className={classes.footer}>
-				<h6 className={classes.h6}>A Ryan Ulch Website</h6>
+				<h6 className={classes.h6}>A <span className={classes.name}>Ryan Ulch</span> Website</h6>
 			</footer>
 		</>
 	);

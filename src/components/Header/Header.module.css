@@ -10,6 +10,9 @@
 	z-index: 3;
 	/* overflow: hidden; */
 	box-shadow: var(--boxShadow);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .span {
@@ -20,23 +23,14 @@
 
 .h1 {
 	transform: skew(var(--antiSkew), var(--antiSkew)) translateY(0%);
-	position: fixed;
-	top: 0;
-	margin: 10px auto;
-	width: var(--bodyWidth);
-	font-size: clamp(1.99rem, 4vw, 2.8rem);
-	padding: 0 20px;
 	text-overflow: clip;
-	overflow-wrap: hidden;
-	line-height: 2;
-	color: var(--textInvert);
+
 }
 
 .subHeader {
 	width: var(--bodyWidth);
 	height: var(--breakerHeight);
 	transform: skew(0, var(--skew)) scaleY(0.9) scaleX(0.97) rotate(var(--rotate)) translateY(20px);
-	/* transform: scale(0.7) rotate(var(--rotate)) translateX(var(--paddingOffset)) translateY(50%); */
 	border-radius: var(--border-radius);
 	position: fixed;
 	top: 2rem;
@@ -56,7 +50,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	
+	text-decoration: none;
 	font-weight: bold;
 	padding-bottom: 5px;
 	background-color: var(--colorSecond);
@@ -71,6 +65,10 @@
 	font-size: clamp(1rem, 3vw, 2.1rem);
 }
 
+.btn:focus {
+	background-color: var(--colorSecond);
+}
+
 .btn:hover {
 	background-color: var(--colorBtnHover);
 	transform: translateY(-1px);
@@ -81,9 +79,7 @@
 	transform: translateY(-5px);
 }
 
-.btn:focus {
-	background-color: var(--colorSecond);
-}
+
 
 .headerBackground {
 	position: fixed;

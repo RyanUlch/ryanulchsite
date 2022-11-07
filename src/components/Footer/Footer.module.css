@@ -11,6 +11,10 @@
 	box-shadow: var(--boxShadow);
 }
 
+.name {
+	font-family: var(--footerFont);
+}
+
 .span {
 	display: inline;
 	overflow-wrap: hidden;

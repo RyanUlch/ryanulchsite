@@ -1,6 +1,8 @@
 import './App.css';
+import './Transitions.css';
 
 import { useEffect, useState } from 'react';
+import { CSSTransition } from 'react-transition-group';
 
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -19,18 +21,27 @@ function App() {
 		}
 	}, [isLightTheme]);
 
+useEffect(() => {
+	window.scrollTo(0, 0);
+}, []);
+		
+
 	return (
-		<div className='page' >
-			<Header onThemeChange={setIsLightTheme}/>
-			<main id='resume'>
-				<PageResume />
-				<div id='port' className='anchor'></div>
-				<PagePortfolio />
-				<div id='cont' className='anchor'></div>
-				<PageContact />
-			</main>
-			<Footer />
-		</div>
+		<>	<div className='page'>
+				<Header onThemeChange={setIsLightTheme}/>
+				<CSSTransition appear={true} in={true} timeout={4000} classNames='PageLoad'>
+					<main id='resume'>
+						<PageResume />
+						<div id='port' className='anchor'></div>
+						<PagePortfolio />
+						<div id='cont' className='anchor'></div>
+						<PageContact />
+					</main>
+				</CSSTransition>
+				<Footer />
+			</div>
+		</>
+		
 	);
 }
 

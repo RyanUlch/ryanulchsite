@@ -1,18 +1,29 @@
 // CSS Import
 import classes from './PageResume.module.css';
 
+import { useEffect } from 'react';
+
 import PageBreaker from '../../PageBreaker/PageBreaker';
 import Expander from '../../Expander/Expander';
 
 import { linker, linkSM } from '../../../helpers/linker';
+import { setTransitionHeight } from '../../../helpers/transition';
 
 const PageResume = () => {
+	useEffect(() => {
+		setTransitionHeight('#about', '--aboutMax');
+		setTransitionHeight('#qualifications', '--qualificationsMax');
+		setTransitionHeight('#workExperience', '--workMax');
+		setTransitionHeight('#schoolExperience', '--schoolMax');
+	}, []);
+	
+
 	return (
 		<section>
 			<PageBreaker value='Resumé'/>
 			<div className='background'>
 				<article id='about'>
-					<Expander anchor='about'>
+					<Expander nodeName='about' anchor='about'>
 						<h3>About Me</h3>
 						<div className='imageContainer'>
 							<img className='displayImage' src='images/ryan4.jpg' alt='Me and my wife Lucy on my first day as an American immigrant'/>
@@ -26,21 +37,21 @@ const PageResume = () => {
 						<p>&emsp;&emsp;The first was a {linkSM('cli')} (Command Line Interface) to work with a proprietary application we used to Quality Control assets. Eventually being reworked as a {linkSM('qt')} {linkSM('gui')} application as that proprietary app and workflow became more complex. The other being a QT GUI application for file manipulation, as there wa a lot of manual changing of file structures.</p>
 						<p>&emsp;&emsp;While working for {linker('Bell Media Canada', 'https://www.bellmedia.ca/')}, I met my lovely wife Lucy; who has lived in Ohio her whole life. We got married in November of 2019 in Toledo, Ohio and started immigration procedures. 2 years later, while during a pandemic, I was able to {linker('immigrate', 'https://www.dhs.gov/get-green-card#:~:text=A%20Green%20Card%20holder%20is,called%20a%20%22Green%20Card.%22')} to the United States of America with my wife. While getting settled, I got a part-time job at {linker(`Graeter's Ice Cream`, 'https://www.graeters.com/')} here in Columbus, Ohio. A great place that helped hone my ability to deal with the general public while completing orders and going above and beyond with both customers and the needs of the store.</p>
 						<p>&emsp;&emsp;While working at Graeter's, I learned web development with the help of my {linker('best friend', 'https://www.linkedin.com/mwlite/in/eric-sartor-21867616a')}; a software developer. Who works at Bell Media, in Canada.</p>
-						<p className={classes.endAbout}>Now, I'm looking for an employer who wants a self-starting, smart, adaptable junior web developer to grow and learn with.</p>
+						<p className={`${classes.endAbout} note`}>Now, I'm looking for an employer who wants a self-starting, smart, adaptable junior web developer to grow and learn with.</p>
 						<img src='#' alt=''/>
 					</Expander>
 				</article>
 				<article id='qualifications'>
-					<Expander anchor='qualifications'>
+					<Expander nodeName='qualifications' anchor='qualifications'>
 						<h3>Qualifications</h3>
 						<div className={classes.listsContainer}>
 							<h4 className={classes.listTitle}>Technologies:</h4>
 							<ul className={classes.listSection}>
-								<li>{linkSM('js')}/{linkSM('ecma')}</li>
+								<li>{linkSM('js')} / {linkSM('ecma')}</li>
 								<li>{linkSM('react')}</li>
 								<li>{linkSM('node')}</li>
 								<li>{linkSM('sql')}</li>
-								<li>{linkSM('html')}/{linkSM('css')}</li>
+								<li>{linkSM('html')} / {linkSM('css')}</li>
 								<li>{linkSM('type')}</li>
 								<li>{linkSM('c++')}</li>
 								<li>{linkSM('java')}</li>
@@ -59,7 +70,7 @@ const PageResume = () => {
 					</Expander>
 				</article>
 				<article id='workExperience'>
-					<Expander anchor='workExperience'>
+					<Expander nodeName='work' anchor='workExperience'>
 						<h3>Work Experience</h3>
 						<em className='note'>Please note, I am listing my entire working history as I believe that every job; even though not programming specific, have given me skills that help in a web development environment. Each one made me the type of worker that I am today</em>
 						<hr />
@@ -140,7 +151,7 @@ const PageResume = () => {
 					</Expander>
 				</article>
 				<article id='schoolExperience'>
-					<Expander anchor='schoolExperience'>
+					<Expander nodeName='school' anchor='schoolExperience'>
 						<h3>School Experience</h3>
 						<hr />
 						<section className={classes.experienceSection}>

@@ -1,57 +1,71 @@
-/* CSS Variables to ensure consistant colors/styles throughout app*/
+/* CSS Variables to ensure consistent colors/styles throughout app*/
 
 :root {
-	--colorMain: #4893b6;
-	--colorSecond: #88acbd;
-	--colorTertiary: #425c68;
-	--colorDropShadow: #4e4e4e;
-	--textMain: #202020;
-	--textInvert: #1a1a1a;
-	--bodyBackground: #bbefff;
-	--linkColor: #073f00;
-	--colorBtnHover: #2a7ca5;
-	--colorBtnActive: #537b8f;
-	--expandBtnOpened: #073f00;
-	--expandBtnClosed: #3f0000;
+	--brandColor: hsl(209, 95%, 36%);
+	--brandHue: 209;
+	--brandSat: 95%;
+	--brandLight: 36%;
+	--accentHue: 29;
+	--mainFont: 'Zen Kaku Gothic Antique', Arial, Helvetica, sans-serif;
+	--titleFont: 'Gentium Book Basic', Garamond, serif;
+	--footerFont: 'Vujahday Script', "Brush Script MT", cursive;
+}
+
+:root {
+	--colorMain: hsl(var(--brandHue), 100%, 70%);
+	--colorSecond: hsl(var(--brandHue), 60%, 80%);
+	--colorTertiary: hsl(var(--brandHue), 20%, 70%);
+	--colorDropShadow: hsl(var(--brandHue), 100%, 30%);
+	--textMain: hsl(var(--brandHue), var(--brandSat), 5%);
+	--textInvert: hsl(var(--brandHue), var(--brandSat), 90%);
+	--borderColor: hsl(var(--accentHue), 87%, 46%);
+	--bodyBackground: hsl(0, 0%, 95%);
+	--colorBtnHover: hsl(var(--brandHue), 60%, 90%);
+	--colorBtnActive: hsl(var(--brandHue), 80%, 90%);
+	--linkColor: hsl(var(--brandHue), 100%, 20%);
+	--expandBtnOpened: hsl(var(--accentHue), 90%, 50%);
+	--expandBtnClosed: hsl(var(--accentHue), 87%, 46%);
+
+
 }
 
 [data-theme="dark"] {
-	--colorMain: #091972;
-	--colorSecond: #2a3572;
-	--colorTertiary: #2a5b72;
-	--colorDropShadow: #131313;
-	--textMain: #d6d6d6;
-	--textInvert: #e0e0e0;
-	--bodyBackground: #161b1d;
-	--colorBtnHover: #164157;
-	--colorBtnActive: #23333b;
-	--linkColor: #18ce00;
-	--expandBtnOpened: #18ce00;
-	--expandBtnClosed: #ce0000;
+	--colorMain: hsl(var(--brandHue), 100%, 30%);
+	--colorSecond: hsl(var(--brandHue), 40%, 20%);
+	--colorTertiary: hsl(var(--brandHue), 20%, 30%);
+	--colorDropShadow: hsl(var(--brandHue), 100%, 10%);
+	--textMain: hsl(var(--brandHue), var(--brandSat), 95%);
+	--textInvert: hsl(var(--brandHue), var(--brandSat), 10%);
+	--borderColor: hsl(var(--accentHue), 87%, 46%);
+	--bodyBackground: hsl(0, 0%, 17%);
+	--colorBtnHover: hsl(var(--brandHue), 40%, 15%);
+	--colorBtnActive:hsl(var(--brandHue), 70%, 15%);
+	--linkColor: hsl(var(--brandHue), 100%, 80%);
+	--expandBtnOpened: hsl(var(--accentHue), 90%, 50%);
+	--expandBtnClosed: hsl(var(--accentHue), 87%, 46%);
 }
 
 :root {
 	--bodyWidth: min(100%, 1000px);
 	--sectionWidth: max(100%, 1000px);
-	--seperatePadding: 20px;
+	--separatePadding: 20px;
 	--pagePadding: min(2vw, 20px);
 	--paddingOffset: calc(-1*(var(--pagePadding)));
 	--font-size: clamp(1rem, 2.5vw, 1.75rem);
 	--headerFooterOffset: calc(var(--font-size)*2.5);
-	--border: 6px solid var(--colorSecond);
+	--border: 6px solid var(--borderColor);
 	--border-radius: 5px;
-	--boxShadow: 3px 10px 10px var(--colorDropShadow);
+	--boxShadow: 3px 5px 5px var(--colorDropShadow);
 	--skew: 2deg;
 	--antiSkew: calc(var(--skew)*-1);
 	--breakerHeight: 6rem;
-	--expandHeightSmall: calc(var(--lineHeight)*4.4);
-	--expandHeightBig: auto;
-	--expandMaxHeight: 4000rem;
-	--transitionOut: max-height 1000ms cubic-bezier(.17,1.2,.63,1.0);
-	--transitionIn: max-height 2000ms cubic-bezier(.17,1.2,.63,1.0);
+
+
+	--expandButtonHeight: 0px;
 }
 
 body {
+	font-family: var(--mainFont);
 	line-height: var(--lineHeight);
 	color: var(--textMain);
 	font-size: var(--font-size);
@@ -61,6 +75,16 @@ body {
 	padding-bottom: var(--headerFooterOffset);
 	background-color: var(--bodyBackground);
 	text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--titleFont);
+	padding-top: 10px;
+}
+
+h1 {
+	color: var(--textMain);
+	font-size: clamp(1.85rem, 4vw, 2.7rem);
 }
 
 h2 {
@@ -98,7 +122,8 @@ p {
 	background-color: var(--colorTertiary);
 	border-radius: var(--border-radius);
 	box-shadow: var(--boxShadow);
-	border: 1px solid var(--linkColor);
+	margin: 5px;
+	border: 1px solid var(--borderColor);
 }
 
 .page {
@@ -114,8 +139,9 @@ p {
 	font-size: 1rem;
 	background-color: var(--colorTertiary);
 	border-radius: var(--border-radius);
-	margin: 10px 0;
+	margin: 10px 6px;
 	box-shadow: var(--boxShadow);
+	padding: 10px;
 }
 
 /* Page Size/Orientation specific variables */
@@ -180,7 +206,7 @@ article {
 	background-color: var(--colorTertiary);
 	/* width: var(--sectionWidth); */
 	height: 100%;
-	padding: var(--seperatePadding) 0;
+	padding: var(--separatePadding) 0;
 	transform: skew(0, var(--skew));
 	border-radius: var(--border-radius);
 	box-shadow: var(--boxShadow);
@@ -203,14 +229,22 @@ article {
 }
 
 
+
 a {
 	color: var(--linkColor);
 	cursor: pointer;
 }
-
-
+/* 
+:root {
+	--transitionOut: max-height 1000ms cubic-bezier(.17,1.2,.63,1.0);
+	--transitionIn: max-height 2000ms cubic-bezier(.17,1.2,.63,1.0);
+	--expandHeightSmall: calc(var(--lineHeight)*4.4);
+	--expandHeightBig: auto;
+	--expandMaxHeight: 4000rem;
+}
 
 /* React Transitions */
+/*
 .my-node-appear {
 	max-height: var(--expandHeightSmall);
 	overflow: hidden;
@@ -232,20 +266,17 @@ a {
 }
 
 .my-node-exit-active {
-	/* height: var(--expandHeightBig); */
 	max-height: var(--expandMaxHeight);
 	transition: var(--transitionIn);
 	overflow: hidden;
 }
 
 .my-node-exit-done {
-	/* height: var(--expandHeightBig); */
 	max-height: var(--expandMaxHeight);
 	overflow: hidden;
 }
 
 .my-node-enter {
-	/* height: var(--expandHeightBig); */
 	max-height: var(--expandMaxHeight);
 	overflow: hidden;
 }
@@ -259,4 +290,4 @@ a {
 .my-node-enter-done {
 	max-height: var(--expandHeightSmall);
 	overflow: hidden;
-}
+} */

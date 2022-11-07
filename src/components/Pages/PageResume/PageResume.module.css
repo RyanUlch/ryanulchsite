@@ -1,6 +1,6 @@
 .listsContainer {
 	margin: 0 auto;
-	width: 90%;
+	width: 100%;
 }
 
 .listSection {
@@ -8,6 +8,12 @@
 	grid-template-columns: 1.5fr 1fr;
 	list-style-type: circle;
 	text-align: left;
+	padding: 5px;
+	list-style-position: outside;
+}
+
+.listSection > li {
+	font-size: clamp(1rem, 4vw, 1.5rem);
 }
 
 .listTitle {
