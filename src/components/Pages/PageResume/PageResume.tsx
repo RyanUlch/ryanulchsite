@@ -30,7 +30,7 @@ const PageResume = () => {
 							<img className='displayImage' src='images/ryan2.jpg' alt='Me and our little black kitten' />
 							<img className='displayImage' src='images/ryan3.jpg' alt='Me with our kitten again. This time both of us being lazy'/>
 						</div>
-						<a href='https://www.linkedin.com/in/ryan-ulch/'>LinkedIn Profile</a>
+						{/* <a href='https://www.linkedin.com/in/ryan-ulch/'>LinkedIn Profile</a> */}
 						<p>&emsp;&emsp;I am a self-taught programmer from Windsor, Canada. Interested in computers and technology since I was a little child; I went into Film and Television production naturally. I enjoyed the technical aspects of production; mostly camera operation and editing. They both gave me the ability to express myself artistically, while still adhering to conventions (and knowing when to buck conventions) to produce something that was uniquely me.</p>
 						<p>&emsp;&emsp;However, the job I got out of college involved none of that. I did get to work in a fast-paced office environment. Working on large-scale projects Quality-Controlling and encoding video for {linker('Crave.ca', 'https:crave.ca')} (Service not available outside of Canada) for almost 8 years.</p>
 						<p>&emsp;&emsp;I had started to learn {linkSM('c++')} programming around 2016. Creating two functional programs that my department used to allow a more efficient workflow.</p>
@@ -81,7 +81,7 @@ const PageResume = () => {
 							<h6>Job Duties:</h6>
 							<ul>
 								<li>Worked in a fast-paced environment to make orders to specifications; often having to have work on multiple orders at a time.</li>
-								<li>Being part of a team, working with others regardless of their experience. Asking questions of those who knew more, and helping those who need that were newer.</li>
+								<li>Being part of a team, working with others regardless of their experience. Asking questions of those who knew more, and helping those who were newer to the process.</li>
 								<li>Keeping work and customer areas tidy, hygienic and inviting.</li>
 							</ul>
 							<h6>Relevance:</h6>
