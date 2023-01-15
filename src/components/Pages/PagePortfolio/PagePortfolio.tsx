@@ -17,6 +17,7 @@ const PagePortfolio = () => {
 	}
 
 	useEffect(() => {
+		setTransitionHeight('#hexitaire', '--hexMax');
 		setTransitionHeight('#foodGroups', '--foodMax');
 		setTransitionHeight('#ryanUlch', '--siteMax');
 	}, []);
@@ -25,6 +26,25 @@ const PagePortfolio = () => {
 		<section id='portfolio'>
 			<PageBreaker value='Portfolio' />
 			<div className='background'>
+				<article id='hexitaire'>
+					<Expander nodeName='hex' anchor='hexitaire'>
+						<h3>{linker('Hexitaire.com','https://Hexitaire.com/', true)}</h3>
+						<div className='imageContainer'>
+							<img className='displayImage' src='images/hex_start_ref.jpg' alt='Hexitaire game just starting out'/>
+							<img className='displayImage' src='images/hex_dedication_ref.jpg' alt='The dedication page of Hexitaire.com' />
+							<img className='displayImage' src='images/hex_win_ref.jpg' alt='A winning game of Hexitaire!'/>
+						</div>
+						<p>&emsp;&emsp;Hexitaire is my favorite project to have worked on so far. From the jump using React and Typescript, I built a fully functional card game from scratch. The idea was simply to build a solitaire game; since my wife highly enjoys those types of games, but to give it a bit of a twist.</p>
+						<p>&emsp;&emsp;I highly suggest you have a round or two to see it in action. Like a normal solitaire game, it's about putting the cards away in their ending piles. There are a few differences you'll want to check the "rules" button and the bottom for.</p>
+						<p>&emsp;&emsp;I did learn a lot with this project, and although I have a few ideas for features in the future (ie. LocalStorage Stats, Online Leader board, Next Move suggestion, etc), I am very happy with how this app both looks and performs.</p>
+						<p>Technologies Used:</p>
+						<p className={classes.skillList}>[{linkSM('react')}] [{linkSM('type')}] [{linkSM('html')}] [{linkSM('css')}]</p>
+						<p>Skills Used:</p>
+						<p className={classes.skillList}>[{linkSM('front')}] [{linkSM('gui')}] [{linkSM('resp')}] [{linkSM('comp')}] [{linkSM('strict')}] [{linkSM('ux')}]</p>
+						<p  className={classes.skillList}>Public github link: {linker('Client', 'https://github.com/RWACU/hexitaire')}</p>
+						{/* <img src='#' alt=''/> */}
+					</Expander>
+				</article>
 				<article id='foodGroups'>
 					<Expander nodeName='food' anchor='foodGroups'>
 						<h3>{linker('Food-Groups.com','https://food-groups.com/', true)}</h3>
@@ -35,13 +55,13 @@ const PagePortfolio = () => {
 						</div>
 						<p>&emsp;&emsp;My first big React project. Food-Groups is a recipe sharing site with user curated recipes. Although it does have a group that everyone automatically joins; it's main purpose is for families/friends to share recipes with each other.</p>
 						<p>&emsp;&emsp;I learned a lot while making this site. I was focussed more on the back end functions rather than the design; as it needed to function well.</p>
-						<p>&emsp;&emsp;I would have changed a few things from the start, such as making it more mobile friendly, and simplifying the recipe creation process. (Although as there are no recipe "standards", it is hard to impliment a format to be able to upload a recipe without putting each part manually)</p>
+						<p>&emsp;&emsp;I would have changed a few things from the start, such as making it more mobile friendly, and simplifying the recipe creation process. (Although as there are no recipe "standards", it is hard to implement a format to be able to upload a recipe without putting each part manually)</p>
 						<p>Technologies Used:</p>
 						<p className={classes.skillList}>[{linkSM('react')}] [{linkSM('js')}] [{linkSM('html')}] [{linkSM('css')}] [{linkSM('node')}] [{linkSM('sql')}]</p>
 						<p>Skills Used:</p>
 						<p className={classes.skillList}>[{linkSM('fs')}] [{linkSM('db')}] [{linkSM('sec')}] [{linkSM('sess')}] [{linkSM('comp')}]</p>
 						<p  className={classes.skillList}>Public github links: {linker('Client', 'https://github.com/RWACU/FoodGroups')}, {linker('Server', 'https://github.com/RWACU/FoodGroupsServer')}</p>
-						<img src='#' alt=''/>
+						{/* <img src='#' alt=''/> */}
 					</Expander>
 				</article>
 				<article id='ryanUlch'>
@@ -63,7 +83,6 @@ const PagePortfolio = () => {
 						<p>Skills Used:</p>
 						<p className={classes.skillList}>[{linkSM('front')}] [{linkSM('resp')}] [{linkSM('strict')}]</p>
 						<p className={classes.skillList}>Public github link: {linker('Client', 'https://github.com/RWACU/ryanulchsite')}</p>
-						
 					</Expander>
 				</article>
 			</div>

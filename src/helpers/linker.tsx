@@ -28,6 +28,7 @@ const links: linkType = {
 	'qt':		['QT', 										'https://doc.qt.io/'],
 	'gui':		['GUI', 									'https://en.wikipedia.org/wiki/Graphical_user_interface'],
 	'quest':	['questions', 								'https://www.forbes.com/sites/goldiechan/2021/02/01/why-asking-questions-is-good-for-your-brand-and-your-career/?sh=370fb3bb1c23'],
+	'ux':		['User-Experience',							'https://www.interaction-design.org/literature/topics/ux-design'],
 };
 
 

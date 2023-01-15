@@ -116,7 +116,7 @@ const PageResume = () => {
 						</section>
 						<hr />
 						<section className={classes.experienceSection}>
-							<h4>Second Shift Instock Associate</h4>
+							<h4>Second Shift In-Stock Associate</h4>
 							<h5><a href='https://www.walmart.ca/en' target="_blank">Walmart</a> Canada ~ 2012-2013 ~ London, Ontario, Canada</h5>
 							<h6>Job Duties:</h6>
 							<ul>
@@ -177,7 +177,7 @@ const PageResume = () => {
 							<h6>The Program:</h6>
 							<ul>
 								<li>A six month program training physical skills in everything to be a Welder Fitter</li>
-								<li>I recieved full {linker('CWB', 'https://www.cwbgroup.org/')} certificates in {linker('SMAW', 'https://weldguru.com/smaw-welding/')} and {linker('FCAW', 'https://fractory.com/flux-cored-arc-welding-explained/')} welding</li>
+								<li>I received full {linker('CWB', 'https://www.cwbgroup.org/')} certificates in {linker('SMAW', 'https://weldguru.com/smaw-welding/')} and {linker('FCAW', 'https://fractory.com/flux-cored-arc-welding-explained/')} welding</li>
 							</ul>
 							<h6>Relevance:</h6>
 							<ul>

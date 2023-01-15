@@ -7,6 +7,7 @@
 	--qualificationsMax: 0;
 	--workMax: 0;
 	--schoolMax: 0;
+	--hexMax: 0;
 	--foodMax: 0;
 	--siteMax: 0;
 }
@@ -42,6 +43,13 @@
 .school-enter {max-height: var(--schoolMax);}
 .school-enter-active {max-height: var(--expandSmall);transition: var(--transition);}
 .school-enter-done {max-height: var(--expandSmall);}
+
+.hex-exit {max-height: var(--expandSmall);}
+.hex-exit-active {max-height: var(--hexMax);transition: var(--transition);}
+.hex-exit-done {max-height: var(--hexMax);}
+.hex-enter {max-height: var(--hexMax);}
+.hex-enter-active {max-height: var(--expandSmall);transition: var(--transition);}
+.hex-enter-done {max-height: var(--expandSmall);}
 
 .food-exit {max-height: var(--expandSmall);}
 .food-exit-active {max-height: var(--foodMax);transition: var(--transition);}
