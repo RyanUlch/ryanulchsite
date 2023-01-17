@@ -15,7 +15,7 @@ const Header = (props: {onThemeChange: ((state: (state: boolean) => boolean) => 
 				<a className={classes.btn} href='#root'>Resumé</a>
 				<a className={classes.btn} href='#port'>Portfolio</a>
 				<a className={classes.btn} href='#cont'>Contact Me</a>
-				<a className={classes.btn} href='#' onClick={themeChangeHandler}>Change Theme</a>
+				<a className={classes.btn} href='#root' onClick={themeChangeHandler}>Change Theme</a>
 			</nav>
 		</header>
 	);

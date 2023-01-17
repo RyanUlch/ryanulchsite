@@ -17,7 +17,9 @@ const PageContact = () => {
 				</article>
 				<article id='location'>
 					<h3>Where I am</h3>
-					<iframe className={classes.map}
+					<iframe
+						title='MapFrame'
+						className={classes.map}
 						loading="lazy"
 						allowFullScreen
 						referrerPolicy="no-referrer-when-downgrade"

@@ -77,7 +77,7 @@ const PageResume = () => {
 						<hr />
 						<section className={classes.experienceSection}>
 							<h4>Line Service Worker (Part-Time)</h4>
-							<h5><a href='https://www.graeters.com/' target="_blank">Graeter's</a> ~ 2022 ~ Columbus, Ohio, USA</h5>
+							<h5><a href='https://www.graeters.com/' target="_blank" rel='noreferrer'>Graeter's</a> ~ 2022 ~ Columbus, Ohio, USA</h5>
 							<h6>Job Duties:</h6>
 							<ul>
 								<li>Worked in a fast-paced environment to make orders to specifications; often having to have work on multiple orders at a time.</li>
@@ -95,7 +95,7 @@ const PageResume = () => {
 						<hr />
 						<section className={classes.experienceSection}>
 							<h4>Digital Media Operator</h4>
-							<h5><a href='https://www.bellmedia.ca/' target="_blank">Bell Media Canada</a> ~ 2014-2022 ~ Scarborough, Ontario, Canada</h5>
+							<h5><a href='https://www.bellmedia.ca/' target="_blank" rel='noreferrer'>Bell Media Canada</a> ~ 2014-2022 ~ Scarborough, Ontario, Canada</h5>
 							<h6>Key Achievements:</h6>
 							<ul>
 								<li>Created a {linkSM('c++')} program that interacts with another software through {linkSM('cli')} to increase productivity, as manual manipulation of this software was time consuming.</li>
@@ -117,7 +117,7 @@ const PageResume = () => {
 						<hr />
 						<section className={classes.experienceSection}>
 							<h4>Second Shift In-Stock Associate</h4>
-							<h5><a href='https://www.walmart.ca/en' target="_blank">Walmart</a> Canada ~ 2012-2013 ~ London, Ontario, Canada</h5>
+							<h5><a href='https://www.walmart.ca/en' target="_blank" rel='noreferrer'>Walmart</a> Canada ~ 2012-2013 ~ London, Ontario, Canada</h5>
 							<h6>Job Duties:</h6>
 							<ul>
 								<li>Organized the stockroom to operate  in a smooth manner.</li>
@@ -134,7 +134,7 @@ const PageResume = () => {
 						<hr />
 						<section className={classes.experienceSection}>
 							<h4>Produce/Hardware Associate</h4>
-							<h5><a href='https://www.walmart.ca/en' target="_blank">Walmart Canada</a> ~ 2011-2012 ~ Windsor, Ontario, Canada</h5>
+							<h5><a href='https://www.walmart.ca/en' target="_blank" rel='noreferrer'>Walmart Canada</a> ~ 2011-2012 ~ Windsor, Ontario, Canada</h5>
 							<h6>Job Duties:</h6>
 							<ul>
 								<li>Responsible for the timely upkeep of the department from spills and messes.</li>

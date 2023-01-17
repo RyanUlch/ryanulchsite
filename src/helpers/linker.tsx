@@ -33,9 +33,13 @@ const links: linkType = {
 
 
 export const linker = (copy: string, link: string, isNewTab: boolean = true) => {
-	return <a href={link} target={isNewTab ? '_blank' : ''}>{copy}</a>
+	if (isNewTab) {
+		return <a href={link} target='_blank' rel='noreferrer'>{copy}</a>
+	} else {
+		return <a href={link}>{copy}</a>
+	}
 }
 
 export const linkSM = (prop: string) => {
-	return <a href={links[prop][1]} target='_blank'>{links[prop][0]}</a>
+	return <a href={links[prop][1]} target='_blank' rel='noreferrer'>{links[prop][0]}</a>
 }

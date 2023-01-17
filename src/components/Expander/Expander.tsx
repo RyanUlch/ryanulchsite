@@ -5,11 +5,6 @@ import { CSSTransition } from 'react-transition-group';
 
 import { setGradientHeight } from '../../helpers/transition';
 
-type props = {
-	anchor: string,
-	children?: React.ReactNode,
-};
-
 const Expander = (props: {nodeName: string, anchor: string, children?: React.ReactNode}) => {
 	const [inProp, setInProp] = useState(true);
 
