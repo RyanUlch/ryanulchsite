@@ -1,50 +1,33 @@
-import './App.css';
-import './Transitions.css';
+import Container from 'react-bootstrap/Container';
 
-import { useEffect, useState } from 'react';
-import { CSSTransition } from 'react-transition-group';
+import './App.scss';
 
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-import PageResume from './components/Pages/PageResume/PageResume';
-import PagePortfolio from './components/Pages/PagePortfolio/PagePortfolio';
-import PageContact from './components/Pages/PageContact/PageContact';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import PagePortfolio from './components/PagePortfolio';
+import PageContact from './components/PageContact';
+import PageResume from './components/PageResume';
+
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
 
 function App() {
-	const [isLightTheme, setIsLightTheme] = useState(window.matchMedia("(prefers-color-scheme: dark)").matches);
-
-	useEffect(() => {
-		if (isLightTheme) {
-			document.documentElement.setAttribute("data-theme", "light");
-		} else {
-			document.documentElement.setAttribute("data-theme", "dark");
-		}
-	}, [isLightTheme]);
-
-useEffect(() => {
-	window.scrollTo(0, 0);
-}, []);
-		
-
 	return (
-		<>	<div className='page'>
-				<Header onThemeChange={setIsLightTheme}/>
-				<CSSTransition appear={true} in={true} timeout={4000} classNames='PageLoad'>
-					<main id='resume'>
-						<PageResume />
-						<div id='port' className='anchor'></div>
-						<PagePortfolio />
-						<div id='cont' className='anchor'></div>
-						<PageContact />
-					</main>
-				</CSSTransition>
-				<Footer />
-			</div>
-		</>
-		
+		<Container fluid='xl'>
+			<Header />
+			<Tabs id="Page Tabs" defaultActiveKey="resume">
+				<Tab eventKey="resume" title="Resume">
+					<PageResume />
+				</Tab>
+				<Tab eventKey="portfolio" title="Portfolio">
+					<PagePortfolio />
+				</Tab>
+				<Tab eventKey="contact" title="Contact">
+					<PageContact />
+				</Tab>
+			</Tabs>
+			<Footer />
+		</Container>
 	);
 }
-
-export default App; 
-
-
+export default App;

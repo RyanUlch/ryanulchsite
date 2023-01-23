@@ -29,6 +29,7 @@ const links: linkType = {
 	'gui':		['GUI', 									'https://en.wikipedia.org/wiki/Graphical_user_interface'],
 	'quest':	['questions', 								'https://www.forbes.com/sites/goldiechan/2021/02/01/why-asking-questions-is-good-for-your-brand-and-your-career/?sh=370fb3bb1c23'],
 	'ux':		['User-Experience',							'https://www.interaction-design.org/literature/topics/ux-design'],
+	'boot':		['Bootstrap',								'https://getbootstrap.com/'],
 };
 
 
@@ -42,4 +43,8 @@ export const linker = (copy: string, link: string, isNewTab: boolean = true) => 
 
 export const linkSM = (prop: string) => {
 	return <a href={links[prop][1]} target='_blank' rel='noreferrer'>{links[prop][0]}</a>
+}
+
+export const linkHREF = (prop: string) => {
+	return links[prop][1];
 }

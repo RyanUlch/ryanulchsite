@@ -1,0 +1,147 @@
+// @import "~bootstrap/scss/bootstrap";
+@import "../public/custom.scss";
+
+/* CSS Variables to ensure consistent colors/styles throughout app*/
+:root {
+	--brandsColor: hsl(var(--brandsHue), var(--brandsSat), var(--brandsLum));
+	--brandsHue: 209;
+	--brandsSat: 95%;
+	--brandsLum: 36%;
+	--accentColor: hsl(var(--accentHue), var(--accentSat), var(--accentLum));
+	--accentHue: 30;
+	--accentSat: 95%;
+	--accentLum: 60%;
+
+	--sansSerifFont: 'Zen Kaku Gothic Antique', Arial, Helvetica, sans-serif;
+	--serifFont: 'Gentium Book Basic', Garamond, serif;
+	--cursiveFont: 'Vujahday Script', "Brush Script MT", cursive;
+
+	--headerHeight: 5vh;
+
+	--whiteColor: #ffffff;
+	--offWhiteColor: #f0f1ff;
+}
+
+// Elements
+html, body, *, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body {
+	overflow-y: scroll;
+	line-height: 1.2;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: var(--whiteColor);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	overflow-wrap: break-word;
+	text-overflow: ellipsis;
+	font-family: var(--serifFont);
+	margin: 0;
+}
+
+p, span {
+	overflow-wrap: break-word;
+	text-overflow: ellipsis;
+	font-family: var(--sansSerifFont);
+}
+
+input, button, textarea, select {
+	font: inherit;
+}
+
+footer {
+	// Display/Position
+	bottom: 0;
+	position: relative;
+	margin-top: 20px;
+}
+
+// Classes
+.cardHeader {
+	text-align: center;
+	background-color: #666666;
+	font-weight: bold;
+	color: white !important;
+}
+
+.cardLink:hover {
+	box-shadow: 3px 3px 10px black !important;
+}
+
+.cursiveName {
+	font-family: var(--cursiveFont);
+}
+
+.fixedLogo {
+	position: fixed;
+	left: 5px;
+	top: 5px;
+}
+
+.fixedHeader {
+	// Display/Position
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	height: clamp(1rem, 4vw, 5rem);
+	justify-content: center;
+	left: 0;
+	padding-top: 5px;
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	// Color/Background
+	background-color: var(--brandsColor);
+	color: var(--accentColor);
+	// Font/Text
+	text-align: center;
+	// Misc
+	cursor: pointer;
+	user-select: none;
+	z-index: 5;
+}
+
+.headerText {
+	font-size: clamp(1rem, 3vw, 4rem);
+}
+
+.imageCarousel {
+	margin-top: clamp(1rem, 4vw, 5rem);
+	margin-bottom: 20px;
+}
+
+.noUnderline {
+	text-decoration: none !important;
+}
+
+.well {
+	box-shadow: 1px 1px 5px #333333 inset;
+	margin-bottom: 16px;
+	background-color: #666666;
+	color: #ffffff;
+}
+
+.well > div {
+	text-align: center;
+	padding: 15px;
+}
+
+.well > div > p {
+	margin: 0;
+}
+
+.whiteBack {
+	background-color: var(--whiteColor);
+}
+
+.offWhiteBack {
+	background-color: var(--offWhiteColor);
+}
+
+.whiteText {
+	color: white !important;
+}

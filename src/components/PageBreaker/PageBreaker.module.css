@@ -1,5 +1,0 @@
-.pageBreaker {
-	height: var(--breakerHeight);
-	transform: skew(var(--skew), var(--skew)) rotate(var(--rotate)) ;
-	margin: 1rem auto;
-}
