@@ -22,7 +22,7 @@ const Header = () => {
 			items.push(
 				<Carousel.Item key={`headerImg${i}`}>
 					<img
-						className="d-block w-100"
+						className="d-block w-100 rounded-bottom"
 						src={`images/header/header${i}.jpg`}
 						alt={imageAlts[i]}
 					/>
@@ -46,7 +46,7 @@ const Header = () => {
 				<h1 className='headerText' style={{overflow: 'hidden'}}>&nbsp;~ Web Developer</h1>
 			</div>
 			{/* Carousel of Images, not linked */}
-			<Carousel className='imageCarousel'>
+			<Carousel className='imageCarousel rounded-bottom'>
 				{carouselItemCreator()}
 			</Carousel>
 		</header>
