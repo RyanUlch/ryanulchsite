@@ -101,7 +101,7 @@ const PageResume = () => {
 										<a className='noUnderline' href='https://www.bellmedia.ca/' target="_blank" rel='noreferrer'>
 											<Card className='offWhiteBack cardLink'>
 												<Card.Header className='p-0'>
-													<Image className='rounded-top w-100' src='images/resume/DALLE_Office.png' alt='Dall-e generated image of an open concept office' />
+													<Image className='rounded-top w-100' src='images/resume/DALLE_Office.jpg' alt='Dall-e generated image of an open concept office' />
 												</Card.Header>
 												<Card.Body className='text-center text-dark'>
 													<Card.Subtitle>Bell Media Inc</Card.Subtitle>
@@ -177,7 +177,7 @@ const PageResume = () => {
 										<a className='noUnderline' href='https://www.walmart.ca/en' target="_blank" rel='noreferrer'>
 											<Card className='offWhiteBack cardLink'>
 												<Card.Header className='p-0'>
-													<Image className='rounded-top w-100' src='images/resume/DALLE_StoreRoom.png' alt='Dall-e generated image of a a backroom of a large department store' />
+													<Image className='rounded-top w-100' src='images/resume/DALLE_StoreRoom.jpg' alt='Dall-e generated image of a a backroom of a large department store' />
 												</Card.Header>
 												<Card.Body className='text-center text-dark'>
 													<Card.Subtitle>Wal-Mart Canada</Card.Subtitle>
@@ -228,7 +228,7 @@ const PageResume = () => {
 										<a className='noUnderline' href='https://www.walmart.ca/en' target="_blank" rel='noreferrer'>
 											<Card className='offWhiteBack cardLink'>
 												<Card.Header className='p-0'>
-													<Image className='rounded-top w-100' src='images/resume/DALLE_Hardware.png' alt='Dall-e generated image of a DIY department in a large department store' />
+													<Image className='rounded-top w-100' src='images/resume/DALLE_Hardware.jpg' alt='Dall-e generated image of a DIY department in a large department store' />
 												</Card.Header>
 												<Card.Body className='text-center text-dark'>
 													<Card.Subtitle>Wal-Mart Canada</Card.Subtitle>
@@ -258,7 +258,7 @@ const PageResume = () => {
 										<a className='noUnderline' href='https://www.fanshawec.ca/' target="_blank" rel='noreferrer'>
 											<Card className='offWhiteBack cardLink'>
 												<Card.Header className='p-0'>
-													<Image className='rounded-top w-100' src='images/resume/DALLE_Newsroom.png' alt='Dall-e generated image of a newsroom from behind the camera'/>
+													<Image className='rounded-top w-100' src='images/resume/DALLE_Newsroom.jpg' alt='Dall-e generated image of a newsroom from behind the camera'/>
 												</Card.Header>
 												<Card.Body className='text-center text-dark'>
 													<Card.Subtitle>Fanshawe College</Card.Subtitle>
@@ -304,7 +304,7 @@ const PageResume = () => {
 										<a className='noUnderline' href="https://www.instituteoftechnicaltrades.com/" target="_blank" rel='noreferrer'>
 											<Card className='offWhiteBack cardLink'>
 												<Card.Header className='p-0'>
-													<Image className='rounded-top w-100' src='images/resume/DALLE_Welder.png' alt='Dall-e generated image of a welder, welding' />
+													<Image className='rounded-top w-100' src='images/resume/DALLE_Welder.jpg' alt='Dall-e generated image of a welder, welding' />
 												</Card.Header>
 												<Card.Body className='text-center text-dark'>
 													<Card.Subtitle>Institute of Technical Trades</Card.Subtitle>
@@ -327,7 +327,7 @@ const PageResume = () => {
 										<a className='noUnderline' href="https://en.wikipedia.org/wiki/General_Amherst_High_School" target="_blank" rel='noreferrer'>
 											<Card className='offWhiteBack cardLink'>
 												<Card.Header className='p-0'>
-													<Image className='rounded-top w-100' src='images/resume/DALLE_Highschool.png' alt='Dall-e generated image of a highschool classroom' />
+													<Image className='rounded-top w-100' src='images/resume/DALLE_Highschool.jpg' alt='Dall-e generated image of a highschool classroom' />
 												</Card.Header>
 												<Card.Body className='text-center text-dark '>
 													<Card.Subtitle>General Amherst High School</Card.Subtitle>
