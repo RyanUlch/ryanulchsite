@@ -6,7 +6,7 @@
 	--brandsColor: hsl(var(--brandsHue), var(--brandsSat), var(--brandsLum));
 	--brandsHue: 209;
 	--brandsSat: 95%;
-	--brandsLum: 36%;
+	--brandsLum: 66%;
 	--accentColor: hsl(var(--accentHue), var(--accentSat), var(--accentLum));
 	--accentHue: 30;
 	--accentSat: 95%;
@@ -46,6 +46,7 @@ p, span {
 	overflow-wrap: break-word;
 	text-overflow: ellipsis;
 	font-family: var(--sansSerifFont);
+	font-size: clamp(1rem, 2vw, 2rem) !important;
 }
 
 input, button, textarea, select {
@@ -95,8 +96,8 @@ footer {
 	top: 0;
 	width: 100vw;
 	// Color/Background
-	background-color: var(--brandsColor);
-	color: var(--accentColor);
+	background-color: #323232;
+	color: var(--brandsColor);
 	// Font/Text
 	text-align: center;
 	// Misc
@@ -113,10 +114,6 @@ footer {
 	margin-top: clamp(3rem, 4vw, 5rem);
 	margin-bottom: 20px;
 }
-
-
-
-
 
 .noUnderline {
 	text-decoration: none !important;

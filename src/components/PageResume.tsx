@@ -24,7 +24,7 @@ const PageResume = () => {
 			{/* "About Me" Accordion.Item */}
 			<Accordion.Item eventKey='0'>
 				<Accordion.Header><h2>About Me</h2></Accordion.Header>
-				<Accordion.Body>
+				<Accordion.Body className='p-md-3 p-0'>
 					<Card className='shadow'>
 						<Card.Body>
 							<p>&emsp;&emsp;I am a self-taught programmer from Windsor, Canada. Interested in computers and technology since I was a little child; I went into Film and Television production naturally. I enjoyed the technical aspects of production; mostly camera operation and editing. They both gave me the ability to express myself artistically, while still adhering to conventions (and knowing when to buck conventions) to produce something that was uniquely me.</p>
@@ -51,10 +51,10 @@ const PageResume = () => {
 			{/* "Qualifications" Accordion.Item */}
 			<Accordion.Item eventKey='1'>
 				<Accordion.Header><h2>Qualifications</h2></Accordion.Header>
-				<Accordion.Body>
+				<Accordion.Body className='p-md-3 p-0'>
 					<Container>
 						<Row xs={1} md={2}>
-							<Col>
+							<Col className='my-3'>
 								{/* Technologies Start */}
 								<ListGroup className='shadow'>
 									<ListGroup.Item variant='success'>Technologies:</ListGroup.Item>
@@ -70,7 +70,7 @@ const PageResume = () => {
 									<ListGroup.Item href={linkHREF('java')} 	action>Java</ListGroup.Item>
 								</ListGroup>
 							</Col>
-							<Col>
+							<Col className='my-md-3 mb-3'>
 								{/* Soft Skills Start */}
 								<ListGroup className='shadow'>
 									<ListGroup.Item variant='success'>Soft Skills:</ListGroup.Item>
@@ -90,14 +90,14 @@ const PageResume = () => {
 			{/* "Experience" Accordion.Item */}
 			<Accordion.Item eventKey='2'>
 				<Accordion.Header><h2>Experience</h2></Accordion.Header>
-				<Accordion.Body>
+				<Accordion.Body className='p-md-3 p-0'>
 					{/* Experience at Bell Media Inc */}
-					<Card className='mb-3 shadow'>
+					<Card className='shadow mb-3'>
 						<Card.Header className='cardHeader'><h3>Digital Media Operator</h3></Card.Header>
 						<Card.Body>
 							<Container>
 								<Row xs={1} md={2}>
-									<Col className='mb-3'>
+									<Col className='mb-3 p-0 p-md-1'>
 										<a className='noUnderline' href='https://www.bellmedia.ca/' target="_blank" rel='noreferrer'>
 											<Card className='offWhiteBack cardLink'>
 												<Card.Header className='p-0'>
@@ -110,7 +110,7 @@ const PageResume = () => {
 											</Card>
 										</a>
 									</Col>
-									<Col>
+									<Col className='p-0 p-md-1'>
 										<ListGroup>
 											{/* Bell Key Achievements */}
 											<ListGroup.Item variant='success'>Key Achievements:</ListGroup.Item>
@@ -138,19 +138,7 @@ const PageResume = () => {
 						<Card.Body className='d-flex flex-row mb-3'>
 							<Container>
 								<Row xs={1} md={2}>
-									<Col className='mb-3'>
-										<ListGroup>
-											{/* Graeter's Job Duties */}
-											<ListGroup.Item variant='success'>Job Duties</ListGroup.Item>
-											<ListGroup.Item>&nbsp;&nbsp;Worked in a fast-paced environment to make orders to specifications; often having to have work on multiple orders at a time.</ListGroup.Item>
-											<ListGroup.Item>&nbsp;&nbsp;Being part of a team, working with others regardless of their experience. Asking questions of those who knew more, and helping those who were newer to the process.</ListGroup.Item>
-											<ListGroup.Item>&nbsp;&nbsp;Keeping work and customer areas tidy, hygienic and inviting.</ListGroup.Item>
-											{/* Graeter's Relevance */}
-											<ListGroup.Item variant='success'>Relevance:</ListGroup.Item>
-											<ListGroup.Item>&nbsp;&nbsp;Being able to work under a time constraint, while handling customer and co-worker interactions, has allowed me to develop professional stress management skills to use time-pressure in a advantageous way.</ListGroup.Item>
-										</ListGroup>
-									</Col>
-									<Col>
+									<Col className='mb-3 p-0 p-md-1 order-md-2'>
 										<a className='noUnderline' href='https://www.graeters.com/' target="_blank" rel='noreferrer'>
 											<Card className='offWhiteBack cardLink'>
 												<Card.Header className='p-0'>
@@ -163,6 +151,18 @@ const PageResume = () => {
 											</Card>
 										</a>
 									</Col>
+									<Col className='p-0 p-md-1 order-md-1'>
+										<ListGroup>
+											{/* Graeter's Job Duties */}
+											<ListGroup.Item variant='success'>Job Duties</ListGroup.Item>
+											<ListGroup.Item>&nbsp;&nbsp;Worked in a fast-paced environment to make orders to specifications; often having to have work on multiple orders at a time.</ListGroup.Item>
+											<ListGroup.Item>&nbsp;&nbsp;Being part of a team, working with others regardless of their experience. Asking questions of those who knew more, and helping those who were newer to the process.</ListGroup.Item>
+											<ListGroup.Item>&nbsp;&nbsp;Keeping work and customer areas tidy, hygienic and inviting.</ListGroup.Item>
+											{/* Graeter's Relevance */}
+											<ListGroup.Item variant='success'>Relevance:</ListGroup.Item>
+											<ListGroup.Item>&nbsp;&nbsp;Being able to work under a time constraint, while handling customer and co-worker interactions, has allowed me to develop professional stress management skills to use time-pressure in a advantageous way.</ListGroup.Item>
+										</ListGroup>
+									</Col>
 								</Row>
 							</Container>
 						</Card.Body>
@@ -173,7 +173,7 @@ const PageResume = () => {
 						<Card.Body>
 							<Container>
 								<Row xs={1} md={2}>
-									<Col className='mb-3'>
+									<Col className='mb-3 p-0 p-md-1'>
 										<a className='noUnderline' href='https://www.walmart.ca/en' target="_blank" rel='noreferrer'>
 											<Card className='offWhiteBack cardLink'>
 												<Card.Header className='p-0'>
@@ -186,7 +186,7 @@ const PageResume = () => {
 											</Card>
 										</a>
 									</Col>
-									<Col>
+									<Col className='p-0 p-md-1'>
 										<ListGroup>
 											{/* Wal-Mart London Job Duties */}
 											<ListGroup.Item variant='success'>Job Duties:</ListGroup.Item>
@@ -210,7 +210,20 @@ const PageResume = () => {
 						<Card.Body>
 							<Container>
 								<Row xs={1} md={2}>
-									<Col className='mb-3'>
+									<Col className='mb-3 p-0 p-md-1 order-md-2'>
+										<a className='noUnderline' href='https://www.walmart.ca/en' target="_blank" rel='noreferrer'>
+											<Card className='offWhiteBack cardLink'>
+												<Card.Header className='p-0'>
+													<Image className='rounded-top w-100' src='images/resume/DALLE_Hardware.jpg' alt='Dall-e generated image of a DIY department in a large department store' />
+												</Card.Header>
+												<Card.Body className='text-center text-dark'>
+													<Card.Subtitle>Wal-Mart Canada</Card.Subtitle>
+													<Card.Text>2010 - 2012 - Windsor, Ontario, Canada</Card.Text>
+												</Card.Body>
+											</Card>
+										</a>
+									</Col>
+									<Col className='p-0 p-md-1 order-md-1'>
 										<ListGroup>
 											{/* Wal-Mart Windsor Job Duties */}
 											<ListGroup.Item variant='success'>Job Duties:</ListGroup.Item>
@@ -224,19 +237,6 @@ const PageResume = () => {
 											<ListGroup.Item>&nbsp;&nbsp;This job, and my dads influence, helped teach me my work ethic. Being responsible for things needing to be done, and doing them without complaint (ok, mostly. I was 16 at the time). Being able to listen to instruction and ask clarifying questions when needed; to not presume I know everything.</ListGroup.Item>
 										</ListGroup>
 									</Col>
-									<Col>
-										<a className='noUnderline' href='https://www.walmart.ca/en' target="_blank" rel='noreferrer'>
-											<Card className='offWhiteBack cardLink'>
-												<Card.Header className='p-0'>
-													<Image className='rounded-top w-100' src='images/resume/DALLE_Hardware.jpg' alt='Dall-e generated image of a DIY department in a large department store' />
-												</Card.Header>
-												<Card.Body className='text-center text-dark'>
-													<Card.Subtitle>Wal-Mart Canada</Card.Subtitle>
-													<Card.Text>2010 - 2012 - Windsor, Ontario, Canada</Card.Text>
-												</Card.Body>
-											</Card>
-										</a>
-									</Col>
 								</Row>
 							</Container>
 						</Card.Body>
@@ -247,14 +247,14 @@ const PageResume = () => {
 			{/* "Education" Accordion.Item */}
 			<Accordion.Item eventKey='3'>
 				<Accordion.Header><h2>Education</h2></Accordion.Header>
-				<Accordion.Body>
+				<Accordion.Body className='p-md-3 p-0'>
 					{/* Education at Fanshawe */}
 					<Card className='mb-3 shadow'>
 						<Card.Header className='cardHeader'><h3>Broadcast Television and Film (Associates)</h3></Card.Header>
 						<Card.Body>
 							<Container>
 								<Row xs={1} md={2}>
-									<Col className='mb-3'>
+									<Col className='mb-3 p-0 p-md-1'>
 										<a className='noUnderline' href='https://www.fanshawec.ca/' target="_blank" rel='noreferrer'>
 											<Card className='offWhiteBack cardLink'>
 												<Card.Header className='p-0'>
@@ -267,7 +267,7 @@ const PageResume = () => {
 											</Card>
 										</a>
 									</Col>
-									<Col>
+									<Col className='p-0 p-md-1'>
 										<ListGroup>
 											{/* Fanshawe Program */}
 											<ListGroup.Item variant='success'>The Program:</ListGroup.Item>
@@ -289,18 +289,7 @@ const PageResume = () => {
 						<Card.Body>
 							<Container>
 								<Row xs={1} md={2}>
-									<Col className='mb-3'>
-										<ListGroup>
-											{/* Fanshawe Program */}
-											<ListGroup.Item variant='success'>The Program:</ListGroup.Item>
-											<ListGroup.Item>&nbsp;&nbsp;A six month program training physical skills in everything to be a Welder Fitter.</ListGroup.Item>
-											<ListGroup.Item>&nbsp;&nbsp;I received full {linker('CWB', 'https://www.cwbgroup.org/')} certificates in {linker('SMAW', 'https://weldguru.com/smaw-welding/')} and {linker('FCAW', 'https://fractory.com/flux-cored-arc-welding-explained/')} welding.</ListGroup.Item>
-											{/* Fanshawe Relevance */}
-											<ListGroup.Item variant='success'>Relevance:</ListGroup.Item>
-											<ListGroup.Item>&nbsp;&nbsp;Even though this field is vastly different to programming. I went into the schooling because I was missing something from my work at Bell Media. I wanted to create and work on things in a more tangible way than I was. Although this career path didn't take, I don't regret the schooling as it showed me that I do value creating and seeing my work come to life.</ListGroup.Item>
-										</ListGroup>
-									</Col>
-									<Col>
+									<Col className='mb-3 p-0 p-md-1 order-md-2'>
 										<a className='noUnderline' href="https://www.instituteoftechnicaltrades.com/" target="_blank" rel='noreferrer'>
 											<Card className='offWhiteBack cardLink'>
 												<Card.Header className='p-0'>
@@ -313,6 +302,17 @@ const PageResume = () => {
 											</Card>
 										</a>
 									</Col>
+									<Col className='p-0 p-md-1 order-md-1'>
+										<ListGroup>
+											{/* Fanshawe Program */}
+											<ListGroup.Item variant='success'>The Program:</ListGroup.Item>
+											<ListGroup.Item>&nbsp;&nbsp;A six month program training physical skills in everything to be a Welder Fitter.</ListGroup.Item>
+											<ListGroup.Item>&nbsp;&nbsp;I received full {linker('CWB', 'https://www.cwbgroup.org/')} certificates in {linker('SMAW', 'https://weldguru.com/smaw-welding/')} and {linker('FCAW', 'https://fractory.com/flux-cored-arc-welding-explained/')} welding.</ListGroup.Item>
+											{/* Fanshawe Relevance */}
+											<ListGroup.Item variant='success'>Relevance:</ListGroup.Item>
+											<ListGroup.Item>&nbsp;&nbsp;Even though this field is vastly different to programming. I went into the schooling because I was missing something from my work at Bell Media. I wanted to create and work on things in a more tangible way than I was. Although this career path didn't take, I don't regret the schooling as it showed me that I do value creating and seeing my work come to life.</ListGroup.Item>
+										</ListGroup>
+									</Col>
 								</Row>
 							</Container>
 						</Card.Body>
@@ -323,7 +323,7 @@ const PageResume = () => {
 						<Card.Body>
 							<Container>
 								<Row xs={1} md={2}>
-									<Col className='mb-3'>
+									<Col className='mb-3 p-0 p-md-1'>
 										<a className='noUnderline' href="https://en.wikipedia.org/wiki/General_Amherst_High_School" target="_blank" rel='noreferrer'>
 											<Card className='offWhiteBack cardLink'>
 												<Card.Header className='p-0'>
@@ -336,7 +336,7 @@ const PageResume = () => {
 											</Card>
 										</a>
 									</Col>
-									<Col>
+									<Col className='p-0 p-md-1'>
 										<ListGroup>
 											{/* Fanshawe Program */}
 											<ListGroup.Item variant='success'>Note:</ListGroup.Item>

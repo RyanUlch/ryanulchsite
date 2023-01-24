@@ -100,6 +100,7 @@ const PagePortfolio = () => {
 				<p>&emsp;&emsp;I've learned having a clear understanding of how the responsiveness of a site should be front and center when first creating mock-ups of a site.</p>
 				<p>&emsp;&emsp;I had started creating the site with media queries trying to handle the switching between different designs; using React to dynamically send different classes to components. This proved inefficient, as it created a complicated, hardly readable codebase just to handle CSS classes.</p>
 				<p>&emsp;&emsp;I threw out the media query handling of responsive design model I was using; opting to use CSS features such as clamp(), calc(), rem/em units, ect. to make sure that the site looked and preformed well on all platforms.</p>
+				<p>&emsp;&emsp;I have now redesigned this website from the ground up using React-Bootstrap. This allowed me to create a responsive site that has more of a professional, web 3.0 feel.</p>
 				<p>&emsp;&emsp;This is also the first project I used Typescript in. As I originally learned development through C++, I am used to strongly typed languages; and although Typescript does have some quirks with the Javascript compilation, it was fairly easy to pick up.</p>
 				<Card className="mb-3">
 					<Card.Header className='offWhiteBack'>Technologies Used:</Card.Header>
