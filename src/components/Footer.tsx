@@ -10,7 +10,7 @@ const Footer = () => {
     <footer>
       <Card className="rounded-top rounded-0 offWhiteBack">
         <Card.Body>
-          <Card className="rounded-top rounded-0 p-0  m-0 whiteBack">
+          <Card className="rounded-top rounded-0 whiteBack">
             <Card.Body>
               <Container>
                 <Row className="text-center p-1">
