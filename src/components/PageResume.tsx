@@ -112,80 +112,79 @@ const PageResume = () => {
           </Accordion.Item>
 
           {/* "Qualifications" Accordion.Item */}
-          <Accordion.Item eventKey="1">
+          <Accordion.Item eventKey="1" className="noPageBreak">
             <Accordion.Header>
               <h2>Qualifications</h2>
             </Accordion.Header>
             <Accordion.Body className="p-md-3 p-0">
-              <Container>
-                <Row xs={1} md={2}>
-                  <Col className="my-3">
-                    {/* Technologies Start */}
-                    <ListGroup className="shadow">
-                      <ListGroup.Item variant="success">
-                        Technologies:
-                      </ListGroup.Item>
-                      <ListGroup.Item href={linkHREF("js")} action>
-                        Javascript / ECMAScript
-                      </ListGroup.Item>
-                      <ListGroup.Item href={linkHREF("react")} action>
-                        React
-                      </ListGroup.Item>
-                      <ListGroup.Item href={linkHREF("vue")} action>
-                        Vue3
-                      </ListGroup.Item>
-                      <ListGroup.Item href={linkHREF("boot")} action>
-                        Bootstrap
-                      </ListGroup.Item>
-                      <ListGroup.Item href={linkHREF("node")} action>
-                        Node.js
-                      </ListGroup.Item>
-                      <ListGroup.Item href={linkHREF("sql")} action>
-                        SQL/MySQL
-                      </ListGroup.Item>
-                      <ListGroup.Item href={linkHREF("html")} action>
-                        HTML 5
-                      </ListGroup.Item>
-                      <ListGroup.Item href={linkHREF("css")} action>
-                        CSS 3
-                      </ListGroup.Item>
-                      <ListGroup.Item href={linkHREF("type")} action>
-                        TypeScript
-                      </ListGroup.Item>
-                      <ListGroup.Item href={linkHREF("c++")} action>
-                        C++
-                      </ListGroup.Item>
-                      <ListGroup.Item href={linkHREF("java")} action>
-                        Java
-                      </ListGroup.Item>
-                    </ListGroup>
-                  </Col>
-                  <Col className="my-md-3 mb-3">
-                    {/* Soft Skills Start */}
-                    <ListGroup className="shadow">
-                      <ListGroup.Item variant="success">
-                        Soft Skills:
-                      </ListGroup.Item>
-                      <ListGroup.Item>Self-Starter</ListGroup.Item>
-                      <ListGroup.Item>Fast-Learner</ListGroup.Item>
-                      <ListGroup.Item>Committed to deadlines</ListGroup.Item>
-                      <ListGroup.Item>Works Well in a team</ListGroup.Item>
-                      <ListGroup.Item>Asks the right questions</ListGroup.Item>
-                      <ListGroup.Item>Deductive Reasoning</ListGroup.Item>
-                    </ListGroup>
-                  </Col>
-                </Row>
+              <Container className="printBySide">
+                <Col className="my-3 printRemove">
+                  {/* Technologies Start */}
+                  <ListGroup className="shadow">
+                    <ListGroup.Item variant="success">
+                      Technologies:
+                    </ListGroup.Item>
+                    <ListGroup.Item href={linkHREF("js")} action>
+                      Javascript / ECMAScript
+                    </ListGroup.Item>
+                    <ListGroup.Item href={linkHREF("react")} action>
+                      React
+                    </ListGroup.Item>
+                    <ListGroup.Item href={linkHREF("vue")} action>
+                      Vue3
+                    </ListGroup.Item>
+                    <ListGroup.Item href={linkHREF("boot")} action>
+                      Bootstrap
+                    </ListGroup.Item>
+                    <ListGroup.Item href={linkHREF("node")} action>
+                      Node.js
+                    </ListGroup.Item>
+                    <ListGroup.Item href={linkHREF("sql")} action>
+                      SQL/MySQL
+                    </ListGroup.Item>
+                    <ListGroup.Item href={linkHREF("html")} action>
+                      HTML 5
+                    </ListGroup.Item>
+                    <ListGroup.Item href={linkHREF("css")} action>
+                      CSS 3
+                    </ListGroup.Item>
+                    <ListGroup.Item href={linkHREF("type")} action>
+                      TypeScript
+                    </ListGroup.Item>
+                    <ListGroup.Item href={linkHREF("c++")} action>
+                      C++
+                    </ListGroup.Item>
+                    <ListGroup.Item href={linkHREF("java")} action>
+                      Java
+                    </ListGroup.Item>
+                  </ListGroup>
+                </Col>
+                <Col className="my-md-3 mb-3 printRemove">
+                  {/* Soft Skills Start */}
+                  <ListGroup className="shadow">
+                    <ListGroup.Item variant="success">
+                      Soft Skills:
+                    </ListGroup.Item>
+                    <ListGroup.Item>Self-Starter</ListGroup.Item>
+                    <ListGroup.Item>Fast-Learner</ListGroup.Item>
+                    <ListGroup.Item>Committed to deadlines</ListGroup.Item>
+                    <ListGroup.Item>Works Well in a team</ListGroup.Item>
+                    <ListGroup.Item>Asks the right questions</ListGroup.Item>
+                    <ListGroup.Item>Deductive Reasoning</ListGroup.Item>
+                  </ListGroup>
+                </Col>
               </Container>
             </Accordion.Body>
           </Accordion.Item>
 
           {/* "Experience" Accordion.Item */}
-          <Accordion.Item eventKey="2">
+          <Accordion.Item eventKey="2" className="noPageBreak">
             <Accordion.Header>
               <h2>Experience</h2>
             </Accordion.Header>
             <Accordion.Body className="p-md-3 p-0">
               {/* Experience at Bell Media Inc */}
+
               <Card className="shadow mb-3">
                 <Card.Header className="cardHeader">
                   <h3>Digital Media Operator</h3>
@@ -284,8 +283,10 @@ const PageResume = () => {
                   </Container>
                 </Card.Body>
               </Card>
+
               {/* Experience at Graeter's */}
-              <Card className="mb-3 shadow">
+
+              <Card className="mb-3 shadow noPageBreak">
                 <Card.Header className="cardHeader">
                   <h3>Line Service Worker</h3>
                 </Card.Header>
@@ -354,8 +355,10 @@ const PageResume = () => {
                   </Container>
                 </Card.Body>
               </Card>
+
               {/* Experience at Wal-Mart (London) */}
-              <Card className="mb-3 shadow">
+
+              <Card className="mb-3 shadow noPageBreak">
                 <Card.Header className="cardHeader">
                   <h3>Second Shift In-Stock Associate</h3>
                 </Card.Header>
@@ -434,8 +437,10 @@ const PageResume = () => {
                   </Container>
                 </Card.Body>
               </Card>
+
               {/* Experience at Wal-Mart (Windsor) */}
-              <Card className="mb-3 shadow">
+
+              <Card className="mb-3 shadow noPageBreak">
                 <Card.Header className="cardHeader">
                   <h3>Produce/Hardware Associate</h3>
                 </Card.Header>
@@ -518,12 +523,13 @@ const PageResume = () => {
           </Accordion.Item>
 
           {/* "Education" Accordion.Item */}
-          <Accordion.Item eventKey="3">
+          <Accordion.Item eventKey="3" className="noPageBreak">
             <Accordion.Header>
               <h2>Education</h2>
             </Accordion.Header>
             <Accordion.Body className="p-md-3 p-0">
               {/* Education at Fanshawe */}
+
               <Card className="mb-3 shadow">
                 <Card.Header className="cardHeader">
                   <h3>Broadcast Television and Film (Associates)</h3>
@@ -600,8 +606,10 @@ const PageResume = () => {
                   </Container>
                 </Card.Body>
               </Card>
+
               {/* Education at ITT */}
-              <Card className="mb-3 shadow">
+
+              <Card className="mb-3 shadow noPageBreak">
                 <Card.Header className="cardHeader">
                   <h3>Welder Fitter</h3>
                 </Card.Header>
@@ -681,8 +689,10 @@ const PageResume = () => {
                   </Container>
                 </Card.Body>
               </Card>
+
               {/* Education at General Amherst */}
-              <Card className="mb-3 shadow">
+
+              <Card className="mb-3 shadow noPageBreak">
                 <Card.Header className="cardHeader">
                   <h3>High School Diploma</h3>
                 </Card.Header>

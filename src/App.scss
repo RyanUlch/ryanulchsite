@@ -1,4 +1,3 @@
-// @import "~bootstrap/scss/bootstrap";
 @import "../public/custom.scss";
 
 /* CSS Variables to ensure consistent colors/styles throughout app*/
@@ -31,135 +30,301 @@ body,
   box-sizing: border-box;
 }
 
-body {
-  overflow-y: scroll;
-  line-height: 1.2;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: var(--accentColor);
+@media not print {
+  body {
+    overflow-y: scroll;
+    line-height: 1.2;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--accentColor);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
+    text-overflow: ellipsis;
+    font-family: var(--serifFont);
+    margin: 0;
+  }
+
+  p,
+  span {
+    overflow-wrap: break-word;
+    text-overflow: ellipsis;
+    font-family: var(--sansSerifFont);
+    font-size: clamp(1rem, 2vw, 2rem) !important;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  footer {
+    // Display/Position
+    bottom: 0;
+    position: relative;
+    margin-top: 20px;
+  }
+
+  // Classes
+  .cardHeader {
+    text-align: center;
+    background-color: #333333;
+    font-weight: bold;
+    color: white !important;
+  }
+
+  .nav-item > .nav-link {
+    background-color: var(--whiteColor);
+  }
+
+  .cardLink:hover {
+    box-shadow: 3px 3px 10px black !important;
+  }
+
+  .cursiveName {
+    font-family: var(--cursiveFont);
+  }
+
+  .fixedLogo {
+    position: fixed;
+    left: 5px;
+    top: 5px;
+  }
+
+  .fixedHeader {
+    // Display/Position
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: clamp(3rem, 4vw, 5rem);
+    justify-content: center;
+    left: 0;
+    padding-top: 5px;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    // Color/Background
+    background-color: #323232;
+    color: var(--brandsColor);
+    // Font/Text
+    text-align: center;
+    // Misc
+    cursor: pointer;
+    user-select: none;
+    z-index: 5;
+  }
+
+  .headerText {
+    font-size: clamp(1rem, 3vw, 4rem);
+  }
+
+  .imageCarousel {
+    margin-top: clamp(3rem, 4vw, 5rem);
+    margin-bottom: 20px;
+  }
+
+  .noUnderline {
+    text-decoration: none !important;
+  }
+
+  .well {
+    box-shadow: 1px 1px 5px #333333 inset;
+    margin-bottom: 16px;
+    background-color: #666666;
+    color: #ffffff;
+  }
+
+  .well > div {
+    text-align: center;
+    padding: 15px;
+  }
+
+  .well > div > p {
+    margin: 0;
+  }
+
+  .whiteBack {
+    background-color: var(--offWhiteColor);
+  }
+
+  .offWhiteBack {
+    background-color: var(--brandsColor);
+  }
+
+  .whiteText {
+    color: white !important;
+  }
+
+  .map {
+    width: 100%;
+    height: 20rem;
+  }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-  text-overflow: ellipsis;
-  font-family: var(--serifFont);
-  margin: 0;
-}
+@media print {
+  * {
+    box-shadow: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    color: #000000 !important;
+  }
 
-p,
-span {
-  overflow-wrap: break-word;
-  text-overflow: ellipsis;
-  font-family: var(--sansSerifFont);
-  font-size: clamp(1rem, 2vw, 2rem) !important;
-}
+  body {
+    background-color: #ffffff;
+    color: #000000;
+  }
 
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
+  body,
+  article {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
 
-footer {
-  // Display/Position
-  bottom: 0;
-  position: relative;
-  margin-top: 20px;
-}
+  .fixedHeader {
+    width: 100vw;
+    text-align: center;
+  }
 
-// Classes
-.cardHeader {
-  text-align: center;
-  background-color: #333333;
-  font-weight: bold;
-  color: white !important;
-}
+  .carousel {
+    display: none;
+  }
 
-.nav-item > .nav-link {
-  background-color: var(--whiteColor);
-}
+  .mapContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 21.59cm;
+    background-color: black !important;
+  }
 
-.cardLink:hover {
-  box-shadow: 3px 3px 10px black !important;
-}
+  .map {
+    width: 10.5cm;
+    height: 8.5cm;
+    margin: 0 auto !important;
+    // width: 100%;
+    // height: 100%;
+  }
 
-.cursiveName {
-  font-family: var(--cursiveFont);
-}
+  .expandLink:after {
+    content: " <" attr(href) "> ";
+  }
 
-.fixedLogo {
-  position: fixed;
-  left: 5px;
-  top: 5px;
-}
+  h1 {
+    display: inline;
+  }
 
-.fixedHeader {
-  // Display/Position
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  height: clamp(3rem, 4vw, 5rem);
-  justify-content: center;
-  left: 0;
-  padding-top: 5px;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  // Color/Background
-  background-color: #323232;
-  color: var(--brandsColor);
-  // Font/Text
-  text-align: center;
-  // Misc
-  cursor: pointer;
-  user-select: none;
-  z-index: 5;
-}
+  .fixedLogo {
+    display: none;
+  }
 
-.headerText {
-  font-size: clamp(1rem, 3vw, 4rem);
-}
+  .imageCarousel {
+    display: none;
+  }
 
-.imageCarousel {
-  margin-top: clamp(3rem, 4vw, 5rem);
-  margin-bottom: 20px;
-}
+  .nav {
+    display: none;
+  }
 
-.noUnderline {
-  text-decoration: none !important;
-}
+  .card,
+  .card-body,
+  .accordion-item {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: 0;
+  }
 
-.well {
-  box-shadow: 1px 1px 5px #333333 inset;
-  margin-bottom: 16px;
-  background-color: #666666;
-  color: #ffffff;
-}
+  .shadow {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
 
-.well > div {
-  text-align: center;
-  padding: 15px;
-}
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
 
-.well > div > p {
-  margin: 0;
-}
+  .accordion-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.whiteBack {
-  background-color: var(--offWhiteColor);
-}
+  .accordion-button:not(.collapsed) {
+    box-shadow: none !important;
+  }
 
-.offWhiteBack {
-  background-color: var(--brandsColor);
-}
+  h2 {
+    text-align: center !important;
+    text-decoration: underline;
+  }
 
-.whiteText {
-  color: white !important;
+  h3 {
+    text-align: center !important;
+    text-decoration: underline !important;
+  }
+
+  .accordion-header {
+    text-align: center;
+  }
+
+  .printBySide {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .collapse:not(.show) {
+    display: block !important;
+  }
+
+  .list-group {
+    display: inline;
+  }
+
+  .printRemove {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  img {
+    display: none;
+    max-width: 100% !important;
+  }
+
+  ul,
+  img {
+    page-break-inside: avoid;
+  }
+
+  footer {
+    display: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    page-break-after: avoid;
+  }
+
+  .noPageBreak {
+    page-break-before: always;
+  }
+
+  @page {
+    margin: 2cm;
+  }
 }

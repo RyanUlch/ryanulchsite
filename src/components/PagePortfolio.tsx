@@ -24,7 +24,7 @@ const PagePortfolio = () => {
             </Card.Header>
           </a>
           {/* Carousel of Images, not linked */}
-          <Carousel>
+          <Carousel className="carousel">
             <Carousel.Item>
               <img
                 className="d-block w-100 tallImage"
@@ -115,7 +115,7 @@ const PagePortfolio = () => {
           <Card.Footer className="cardHeader">
             Public github link: &nbsp;
             <a
-              className="whiteText"
+              className="whiteText expandLink"
               href="https://github.com/RyanUlch/AlexGame"
             >
               Client
@@ -123,14 +123,14 @@ const PagePortfolio = () => {
           </Card.Footer>
         </Card>
         {/* Hex-sweep.com */}
-        <Card className="mb-5">
+        <Card className="mb-5 noPageBreak">
           <a href="https://Hex-Sweep.com/" className="whiteText">
             <Card.Header className="cardHeader">
               <h3>Hex-Sweep.com</h3>
             </Card.Header>
           </a>
           {/* Carousel of Images, not linked */}
-          <Carousel>
+          <Carousel className="carousel">
             <Carousel.Item>
               <img
                 className="d-block w-100 tallImage"
@@ -203,7 +203,7 @@ const PagePortfolio = () => {
           <Card.Footer className="cardHeader">
             Public github link: &nbsp;
             <a
-              className="whiteText"
+              className="whiteText expandLink"
               href="https://github.com/RyanUlch/hexsweep"
             >
               Client
@@ -211,14 +211,14 @@ const PagePortfolio = () => {
           </Card.Footer>
         </Card>
         {/* Hexitaire.com */}
-        <Card className="mb-5">
+        <Card className="mb-5 noPageBreak">
           <a href="https://Hexitaire.com/" className="whiteText">
             <Card.Header className="cardHeader">
               <h3>Hexitaire.com</h3>
             </Card.Header>
           </a>
           {/* Carousel of Images, not linked */}
-          <Carousel>
+          <Carousel className="carousel">
             <Carousel.Item>
               <img
                 className="d-block w-100"
@@ -284,13 +284,16 @@ const PagePortfolio = () => {
           </Card.Body>
           <Card.Footer className="cardHeader">
             Public github link: &nbsp;
-            <a className="whiteText" href="https://github.com/RWACU/hexitaire">
+            <a
+              className="whiteText expandLink"
+              href="https://github.com/RWACU/hexitaire"
+            >
               Client
             </a>
           </Card.Footer>
         </Card>
         {/* RyanUlch.com */}
-        <Card>
+        <Card className="noPageBreak">
           <Card.Header className="cardHeader">
             <h3>This Site!</h3>
           </Card.Header>
@@ -354,7 +357,7 @@ const PagePortfolio = () => {
           <Card.Footer className="cardHeader">
             Public github link: &nbsp;
             <a
-              className="whiteText"
+              className="whiteText expandLink"
               href="https://github.com/RWACU/ryanulchsite"
             >
               Client
