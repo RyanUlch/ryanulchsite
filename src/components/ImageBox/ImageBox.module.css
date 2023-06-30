@@ -1,0 +1,12 @@
+.imageBorder {
+	background-color: var(--lightGrassColor);
+	border: 32px solid transparent;
+	border-image: url(../../../public/images/borders/FlowerBed.png) 32 round;
+}
+
+.image {
+	aspect-ratio: 1;
+	width: clamp(100px, 100%, 250px);
+	border-radius: var(--borderRadius);
+	border: 3px solid red;
+}

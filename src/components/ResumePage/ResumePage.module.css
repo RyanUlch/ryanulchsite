@@ -1,0 +1,13 @@
+.crop {
+	background-blend-mode: darken;
+	background-image: url(../../../public/images/borders/crop.png);
+	background-repeat: round;
+	padding: 16px;
+}
+
+.paragraph {
+	background-color: hsl(0, 0%, 19%);
+	padding: 16px;
+	margin-bottom: 16px;
+	border-radius: 1rem;
+}

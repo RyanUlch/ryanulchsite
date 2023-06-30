@@ -1,0 +1,25 @@
+.fenceArticle {
+	width: 100%;
+	color: white;
+	margin: 32px 0;
+}
+
+.fenceHeader {
+	background-color: var(--groundColor);
+	padding: 0 32px;
+	width: 384px;
+	height: 96px;
+	text-align: center;
+	border: 32px solid transparent;
+	border-image: url(../../../public/images/borders/fenceHeading.png) 32 round;
+}
+
+.fenceHeaderText {
+	transform: translateY(16px);
+}
+
+.fenceBody {
+	background-color: var(--groundColor);
+	border: 32px solid transparent;
+	border-image: url(../../../public/images/borders/fence.png) 32 round;
+}

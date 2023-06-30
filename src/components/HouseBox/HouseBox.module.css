@@ -1,0 +1,26 @@
+.houseSection {
+	width: 100%;
+	color: white;
+}
+
+.houseBody {
+	/* width: 50%; */
+	background-image: url(../../../public/images/borders/RedHouseRoof.png);
+	border: 32px solid transparent;
+	background-clip: padding-box;
+	border-image: url(../../../public/images/borders/RedHouse.png) 32 round;
+}
+
+.red {
+	border: 32px solid transparent;
+	background-clip: padding-box;
+	background-image: url(../../../public/images/borders/RedHouseRoof.png);
+	border-image: url(../../../public/images/borders/RedHouse.png) 32 round;
+}
+
+.blue {
+	border: 32px solid transparent;
+	background-clip: padding-box;
+	background-image: url(../../../public/images/borders/BlueHouseRoof.png);
+	border-image: url(../../../public/images/borders/BlueHouse.png) 32 round;
+}
