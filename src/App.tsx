@@ -2,7 +2,7 @@ import ResumePage from "./components/ResumePage/ResumePage";
 
 function App() {
 	return (
-		<div className="fullPage">
+		<div>
 			<ResumePage />
 		</div>
 	);

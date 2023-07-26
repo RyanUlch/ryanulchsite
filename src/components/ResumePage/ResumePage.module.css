@@ -11,3 +11,9 @@
 	margin-bottom: 16px;
 	border-radius: 1rem;
 }
+
+.grass {
+	width: 100%;
+	background-image: url(../../../public/images/PixelArt/grassbackdrop.png);
+	background-size: 25%;
+}
