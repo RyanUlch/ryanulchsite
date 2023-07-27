@@ -11,7 +11,7 @@
 	height: 96px;
 	text-align: center;
 	border: 32px solid transparent;
-	border-image: url(../../../public/images/borders/fenceHeading.png) 32 round;
+	border-image: url(../../../public/images/PixelArt/fenceHeading.png) 32 round;
 }
 
 .fenceHeaderText {
@@ -21,5 +21,5 @@
 .fenceBody {
 	background-color: var(--groundColor);
 	border: 32px solid transparent;
-	border-image: url(../../../public/images/borders/fence.png) 32 round;
+	border-image: url(../../../public/images/PixelArt/fence.png) 32 round;
 }

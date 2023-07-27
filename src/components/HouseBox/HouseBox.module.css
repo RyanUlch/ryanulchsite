@@ -5,22 +5,22 @@
 
 .houseBody {
 	/* width: 50%; */
-	background-image: url(../../../public/images/borders/RedHouseRoof.png);
+	background-image: url(../../../public/images/PixelArt/RedHouseRoof.png);
 	border: 32px solid transparent;
 	background-clip: padding-box;
-	border-image: url(../../../public/images/borders/RedHouse.png) 32 round;
+	border-image: url(../../../public/images/PixelArt/RedHouse.png) 32 round;
 }
 
 .red {
 	border: 32px solid transparent;
 	background-clip: padding-box;
-	background-image: url(../../../public/images/borders/RedHouseRoof.png);
-	border-image: url(../../../public/images/borders/RedHouse.png) 32 round;
+	background-image: url(../../../public/images/PixelArt/RedHouseRoof.png);
+	border-image: url(../../../public/images/PixelArt/RedHouse.png) 32 round;
 }
 
 .blue {
 	border: 32px solid transparent;
 	background-clip: padding-box;
-	background-image: url(../../../public/images/borders/BlueHouseRoof.png);
-	border-image: url(../../../public/images/borders/BlueHouse.png) 32 round;
+	background-image: url(../../../public/images/PixelArt/BlueHouseRoof.png);
+	border-image: url(../../../public/images/PixelArt/BlueHouse.png) 32 round;
 }

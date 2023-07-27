@@ -1,12 +1,14 @@
 .imageBorder {
-	background-color: var(--lightGrassColor);
-	border: 32px solid transparent;
-	border-image: url(../../../public/images/borders/FlowerBed.png) 32 round;
+	border: 64px solid transparent;
+	border-image: url(../../../public/images/PixelArt/FlowerBed.png) 64 fill;
 }
 
 .image {
-	aspect-ratio: 1;
-	width: clamp(100px, 100%, 250px);
-	border-radius: var(--borderRadius);
-	border: 3px solid red;
+	box-sizing: border-box;
+	image-rendering: auto;
+
+	/* aspect-ratio: 1; */
+	width: clamp(50px, 100%, 250px);
+	/* border-radius: var(--borderRadius); */
+	border: 3px solid #3c5e8b;
 }
