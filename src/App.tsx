@@ -1,11 +1,7 @@
-import ResumePage from "./components/ResumePage/ResumePage";
+import ResumePage from './components/ResumePage/ResumePage';
 
 function App() {
-	return (
-		<div>
-			<ResumePage />
-		</div>
-	);
+	return <ResumePage />;
 }
 
 export default App;
