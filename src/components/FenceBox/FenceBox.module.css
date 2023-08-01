@@ -1,12 +1,12 @@
 .fenceArticle {
 	width: 100%;
 	color: white;
-	/* margin: 32px 0; */
+	margin: 0 0 32px 0;
 }
 
 .fenceHeader {
-	background-color: var(--groundColor);
-	padding: 0 32px;
+	/* background-color: var(--groundColor); */
+	/* padding: 0 32px; */
 	width: 384px;
 	height: 96px;
 	text-align: center;
@@ -16,10 +16,18 @@
 
 .fenceHeaderText {
 	transform: translateY(16px);
+	background-color: var(--groundColorDark);
+	border-radius: 1rem;
+	padding: 5px 0;
 }
 
 .fenceBody {
-	background-color: var(--groundColor);
+	/* background-color: var(--groundColor); */
 	border: 32px solid transparent;
 	border-image: url(../../../public/images/PixelArt/fence.png) 32 round;
+}
+
+.fenceGround {
+	height: 100%;
+	background-color: var(--groundColor);
 }

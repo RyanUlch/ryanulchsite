@@ -1,0 +1,64 @@
+.doubleLists {
+	padding: 20px;
+	width: 50%;
+	display: inline-flex;
+	flex-direction: column;
+}
+
+.background {
+	background-color: var(--groundColorDark);
+}
+
+.noBackground {
+	background-color: var(--groundColor);
+}
+
+.flex {
+	height: 100%;
+	display: inline-flex;
+	align-items: center;
+}
+
+.list {
+	list-style-type: square;
+	list-style-position: inside;
+	> li {
+		border-radius: 0 1rem 1rem 0;
+		line-height: 36px;
+		height: 36px;
+	}
+	> li > p {
+		display: inline-block;
+		/* width: 80%; */
+		height: 100%;
+		transform: translateY(-13px);
+	}
+
+	:nth-child(1) {
+		list-style-image: url("../../../public/images/PixelArt/li_1.png");
+	}
+	:nth-child(2) {
+		list-style-image: url("../../../public/images/PixelArt/li_2.png");
+	}
+	:nth-child(3) {
+		list-style-image: url("../../../public/images/PixelArt/li_3.png");
+	}
+	:nth-child(4) {
+		list-style-image: url("../../../public/images/PixelArt/li_4.png");
+	}
+	:nth-child(5) {
+		list-style-image: url("../../../public/images/PixelArt/li_5.png");
+	}
+	:nth-child(6) {
+		list-style-image: url("../../../public/images/PixelArt/li_6.png");
+	}
+	:nth-child(7) {
+		list-style-image: url("../../../public/images/PixelArt/li_7.png");
+	}
+	:nth-child(8) {
+		list-style-image: url("../../../public/images/PixelArt/li_8.png");
+	}
+	:nth-child(n + 9) {
+		list-style-image: url("../../../public/images/PixelArt/li_8.png");
+	}
+}

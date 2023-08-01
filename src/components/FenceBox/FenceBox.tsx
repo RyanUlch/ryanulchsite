@@ -6,12 +6,16 @@ function FenceBox(props: { children: ReactNode; heading?: string }) {
 		<article className={classes.fenceArticle}>
 			{props.heading ? (
 				<div className={`${classes.fenceHeader}`}>
-					<h3 className={classes.fenceHeaderText}>{props.heading}</h3>
+					<div className={classes.fenceGround}>
+						<h3 className={classes.fenceHeaderText}>{props.heading}</h3>
+					</div>
 				</div>
 			) : (
 				<></>
 			)}
-			<div className={classes.fenceBody}>{props.children}</div>
+			<div className={classes.fenceBody}>
+				<div className={classes.fenceGround}>{props.children}</div>
+			</div>
 		</article>
 	);
 }

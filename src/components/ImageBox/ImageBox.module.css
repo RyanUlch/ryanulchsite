@@ -1,14 +1,47 @@
 .imageBorder {
 	border: 64px solid transparent;
 	border-image: url(../../../public/images/PixelArt/FlowerBed.png) 64 fill;
+	width: fit-content;
+}
+
+.imageAndLabel {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin: 0 10px;
+
+	transition: transform 1s;
+}
+
+.grow:hover {
+	transform: scale(1.1);
 }
 
 .image {
 	box-sizing: border-box;
 	image-rendering: auto;
 
-	/* aspect-ratio: 1; */
-	width: clamp(50px, 100%, 250px);
+	aspect-ratio: 1;
+	/* width: clamp(20vw, , 50vw); */
+	width: 100px;
 	/* border-radius: var(--borderRadius); */
 	border: 3px solid #3c5e8b;
+}
+.linked:hover {
+	cursor: pointer !important;
+}
+
+.label {
+	padding: 10px;
+	display: block;
+	width: 100%;
+	text-align: center;
+	background-color: var(--groundColorDark);
+	border-radius: var(--borderRadius);
+	color: white;
+	text-decoration: underline;
+}
+
+.label {
+	cursor: pointer !important;
 }

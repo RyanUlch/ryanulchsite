@@ -3,12 +3,44 @@
 	color: white;
 }
 
+.title {
+	width: 100%;
+
+	background-color: hsl(0, 0%, 19%);
+	padding: 16px;
+	margin-bottom: 16px;
+	border-radius: 1rem;
+	display: inline-flex;
+	justify-content: center;
+}
+
 .houseBody {
-	/* width: 50%; */
+	display: flex;
+	/* justify-content: center; */
+	align-items: flex-start;
+	flex-direction: column;
 	background-image: url(../../../public/images/PixelArt/RedHouseRoof.png);
 	border: 32px solid transparent;
 	background-clip: padding-box;
 	border-image: url(../../../public/images/PixelArt/RedHouse.png) 32 round;
+
+	> h4 {
+		background-color: hsl(0, 0%, 19%);
+		padding: 8px 8px 0 8px;
+		/* margin-bottom: 16px; */
+		border-radius: 1rem 1rem 0 0;
+	}
+
+	> h4 + p {
+		border-radius: 0 1rem 1rem 1rem;
+	}
+
+	> p {
+		background-color: hsl(0, 0%, 19%);
+		padding: 16px;
+		margin-bottom: 16px;
+		border-radius: 1rem;
+	}
 }
 
 .red {

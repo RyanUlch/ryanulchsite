@@ -12,7 +12,9 @@ code {
 
 :root {
 	--groundColor: #705d24;
+	--groundColorDark: hsl(42, 61%, 19%);
 	--grassColor: #509bce;
+	--grassColorDark: #3c5e8b;
 	--lightGrassColor: #00c900;
 
 	--borderRadius: 1rem;
