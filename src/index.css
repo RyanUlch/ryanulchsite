@@ -16,6 +16,8 @@ code {
 	--grassColor: #509bce;
 	--grassColorDark: #3c5e8b;
 	--lightGrassColor: #00c900;
+	--oceanColor: #a23e8c;
+	--oceanColorDark: #852e82;
 
 	--borderRadius: 1rem;
 }
@@ -34,10 +36,4 @@ a {
 
 body {
 	background-color: var(--grassColor);
-}
-
-.fullPage {
-	min-width: 600px;
-	max-width: 1000px;
-	margin: 0 auto;
 }

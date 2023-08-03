@@ -1,7 +1,10 @@
 .fenceArticle {
-	width: 100%;
 	color: white;
 	margin: 0 0 32px 0;
+	min-width: 600px;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding-bottom: 20px;
 }
 
 .fenceHeader {

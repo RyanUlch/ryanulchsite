@@ -1,3 +1,41 @@
+header {
+	margin: 0 0 32px 0;
+	min-width: 600px;
+	max-width: 1000px;
+	margin: 0 auto;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	height: 100%;
+
+	> h1 {
+		font-size: 3rem;
+		background-color: var(--oceanColorDark);
+		padding: 30px;
+		border-radius: 0 0 1rem 1rem;
+		box-shadow: 3px 3px 10px var(--oceanColor);
+	}
+}
+
+.property {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	/* flex-wrap: wrap; */
+	width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+	.isOdd {
+		flex-direction: column-reverse !important;
+	}
+
+	.isEven {
+		flex-direction: column !important;
+	}
+}
+
 .crop {
 	background-blend-mode: darken;
 	background-image: url(../../../public/images/PixelArt/crop.png);
@@ -12,8 +50,52 @@
 	border-radius: 1rem;
 }
 
+.beach {
+	width: 100%;
+	background-image: url(../../../public/images/PixelArt/beachbackdrop.png);
+	background-size: 35%;
+	height: 311px;
+	background-repeat: round;
+	background-position: bottom left;
+	background-attachment: local;
+}
+
 .grass {
 	width: 100%;
 	background-image: url(../../../public/images/PixelArt/grassbackdrop.png);
-	background-size: 25%;
+	background-size: 35%;
+	background-repeat: round;
+	background-position: top left;
+	background-attachment: local;
+}
+
+.grassMountainTransition {
+	width: 100%;
+	height: 212px;
+	/* background-repeat: repeat; */
+	background-repeat: round;
+	background-image: url(../../../public/images/PixelArt/grasstomountainbackdrop.png);
+	background-size: 35%;
+	left: 0;
+	top: 0;
+	background-position: top left;
+	background-attachment: local;
+}
+
+.mountain {
+	width: 100%;
+	background-image: url(../../../public/images/PixelArt/mountainbackdrop.png);
+	background-size: 35%;
+	background-repeat: round;
+	background-position: top left;
+	background-attachment: local;
+}
+
+.sideGroup {
+	display: flex;
+	flex-direction: column;
+}
+
+.togetherList {
+	width: 100%;
 }

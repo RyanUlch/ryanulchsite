@@ -34,6 +34,13 @@
 		transform: translateY(-13px);
 	}
 
+	> li > a {
+		display: inline-block;
+		/* width: 80%; */
+		height: 100%;
+		transform: translateY(-13px);
+	}
+
 	:nth-child(1) {
 		list-style-image: url("../../../public/images/PixelArt/li_1.png");
 	}

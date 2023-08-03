@@ -74,6 +74,10 @@ export const linkSM = (prop: string) => {
 	);
 };
 
+export const linkList = (prop: string): { name: string; link: string } => {
+	return { name: links[prop][0], link: links[prop][1] };
+};
+
 export const linkHREF = (prop: string) => {
 	return links[prop][1];
 };
