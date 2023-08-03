@@ -18,6 +18,13 @@ header {
 	}
 }
 
+.githubLink {
+	background-color: var(--groundColorDark);
+	padding: 20px;
+	border-radius: 1rem;
+	margin: 10px 0;
+}
+
 .property {
 	align-items: center;
 	display: flex;
@@ -36,6 +43,16 @@ header {
 	}
 }
 
+hr {
+	background-color: var(--groundColorDark);
+	height: 5px;
+	color: var(--groundColorDark);
+	/* width: 80%; */
+	align-self: center;
+	border: none;
+	border-radius: 1rem;
+}
+
 .crop {
 	background-blend-mode: darken;
 	background-image: url(../../../public/images/PixelArt/crop.png);
@@ -52,43 +69,45 @@ header {
 
 .beach {
 	width: 100%;
-	background-image: url(../../../public/images/PixelArt/beachbackdrop.png);
-	background-size: 35%;
-	height: 311px;
-	background-repeat: round;
-	background-position: bottom left;
-	background-attachment: local;
+	background: url(../../../public/images/PixelArt/beachbackdrop.png) no-repeat center center fixed;
+	/* background-size: 35%; */
+	/* height: 311px; */
+	/* background-repeat: round; */
+	/* background-position: bottom left; */
+	/* background-attachment: local; */
 }
 
 .grass {
-	width: 100%;
-	background-image: url(../../../public/images/PixelArt/grassbackdrop.png);
-	background-size: 35%;
-	background-repeat: round;
-	background-position: top left;
-	background-attachment: local;
+	/* width: 100%; */
+	background: url(../../../public/images/PixelArt/grassbackdrop.png) no-repeat center center fixed;
+	/* background-size: 35%; */
+	/* background-repeat: round; */
+	/* background-position: top left; */
+	/* background-attachment: local; */
 }
 
 .grassMountainTransition {
-	width: 100%;
-	height: 212px;
+	/* width: 100%; */
+	/* height: 212px; */
 	/* background-repeat: repeat; */
-	background-repeat: round;
-	background-image: url(../../../public/images/PixelArt/grasstomountainbackdrop.png);
-	background-size: 35%;
-	left: 0;
-	top: 0;
-	background-position: top left;
-	background-attachment: local;
+	/* background-repeat: round; */
+	background: url(../../../public/images/PixelArt/grasstomountainbackdrop.png) no-repeat center
+		center fixed;
+	/* background-size: 35%; */
+	/* left: 0; */
+	/* top: 0; */
+	/* background-position: top left; */
+	/* background-attachment: local; */
 }
 
 .mountain {
-	width: 100%;
-	background-image: url(../../../public/images/PixelArt/mountainbackdrop.png);
-	background-size: 35%;
-	background-repeat: round;
-	background-position: top left;
-	background-attachment: local;
+	/* width: 100%; */
+	background: url(../../../public/images/PixelArt/mountainbackdrop.png) no-repeat center center
+		fixed;
+	/* background-size: 35%; */
+	/* background-repeat: round; */
+	/* background-position: top left; */
+	/* background-attachment: local; */
 }
 
 .sideGroup {

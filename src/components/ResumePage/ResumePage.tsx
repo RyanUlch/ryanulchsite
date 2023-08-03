@@ -47,6 +47,7 @@ const ResumePage = () => {
 							<ImageBox src="header0.jpg" alt="Me in a suit" />
 						</div>
 					</SectionGroup>
+					<hr />
 					<SectionGroup>
 						<div className={`${classes.property} ${classes.isEven}`}>
 							<ImageBox src="header1.jpg" alt="Me with my black cat 'Soy Sauce'" />
@@ -73,6 +74,7 @@ const ResumePage = () => {
 							</HouseBox>
 						</div>
 					</SectionGroup>
+					<hr />
 					<SectionGroup>
 						<div className={`${classes.property} ${classes.isOdd}`}>
 							<HouseBox>
@@ -98,6 +100,7 @@ const ResumePage = () => {
 							</HouseBox>
 						</div>
 					</SectionGroup>
+					<hr />
 					<SectionGroup>
 						<HouseBox isBlue>
 							<p>
@@ -111,6 +114,7 @@ const ResumePage = () => {
 							</p>
 						</HouseBox>
 					</SectionGroup>
+					<hr />
 					<SectionGroup>
 						<HouseBox>
 							<p>
@@ -182,6 +186,7 @@ const ResumePage = () => {
 							/>
 						</div>
 					</SectionGroup>
+					<hr />
 					{/* Experience at Bell Media Inc */}
 					<SectionGroup>
 						<div className={`${classes.property} ${classes.isEven}`}>
@@ -230,6 +235,7 @@ const ResumePage = () => {
 							</HouseBox>
 						</div>
 					</SectionGroup>
+					<hr />
 					{/* Experience at Graeter's */}
 					<SectionGroup>
 						<div className={`${classes.property} ${classes.isOdd}`}>
@@ -262,6 +268,7 @@ const ResumePage = () => {
 							/>
 						</div>
 					</SectionGroup>
+					<hr />
 					{/* Experience at Wal-Mart (London) */}
 					<SectionGroup>
 						<div className={`${classes.property} ${classes.isEven}`}>
@@ -297,6 +304,7 @@ const ResumePage = () => {
 							</HouseBox>
 						</div>
 					</SectionGroup>
+					<hr />
 					{/* Experience at Wal-Mart (Windsor) */}
 					<SectionGroup>
 						<div className={`${classes.property} ${classes.isOdd}`}>
@@ -336,7 +344,6 @@ const ResumePage = () => {
 						</div>
 					</SectionGroup>
 				</FenceBox>
-
 				{/* Education */}
 				<FenceBox heading="Education">
 					{/* Education at Fanshawe */}
@@ -375,6 +382,7 @@ const ResumePage = () => {
 							</HouseBox>
 						</div>
 					</SectionGroup>
+					<hr />
 					{/* Education at ITT */}
 					<SectionGroup>
 						<div className={`${classes.property} ${classes.isOdd}`}>
@@ -412,6 +420,7 @@ const ResumePage = () => {
 							/>
 						</div>
 					</SectionGroup>
+					<hr />
 					{/* Education at General Amherst */}
 					<SectionGroup>
 						<div className={`${classes.property} ${classes.isEven}`}>
@@ -516,14 +525,17 @@ const ResumePage = () => {
 								]}
 							</UnorderedList>
 						</div>
-						Public github link: &nbsp;
-						<a
-							className="whiteText expandLink"
-							href="https://github.com/RyanUlch/AlexGame"
-						>
-							Client
-						</a>
+						<div className={classes.githubLink}>
+							Public github link: &nbsp;
+							<a
+								className="whiteText expandLink"
+								href="https://github.com/RyanUlch/AlexGame"
+							>
+								Client
+							</a>
+						</div>
 					</SectionGroup>
+					<hr />
 					<SectionGroup>
 						{/* Hex-sweep.com */}
 						<div className={`${classes.property} ${classes.isEven}`}>
@@ -593,14 +605,17 @@ const ResumePage = () => {
 								]}
 							</UnorderedList>
 						</div>
-						Public github link: &nbsp;
-						<a
-							className="whiteText expandLink"
-							href="https://github.com/RyanUlch/hexsweep"
-						>
-							Client
-						</a>
+						<div className={classes.githubLink}>
+							Public github link: &nbsp;
+							<a
+								className="whiteText expandLink"
+								href="https://github.com/RyanUlch/hexsweep"
+							>
+								Client
+							</a>
+						</div>
 					</SectionGroup>
+					<hr />
 					{/* Hexitaire.com */}
 					<SectionGroup>
 						<div className={`${classes.property} ${classes.isOdd}`}>
@@ -663,14 +678,17 @@ const ResumePage = () => {
 								]}
 							</UnorderedList>
 						</div>
-						Public github link: &nbsp;
-						<a
-							className="whiteText expandLink"
-							href="https://github.com/RWACU/hexitaire"
-						>
-							Client
-						</a>
+						<div className={classes.githubLink}>
+							Public github link: &nbsp;
+							<a
+								className="whiteText expandLink"
+								href="https://github.com/RWACU/hexitaire"
+							>
+								Client
+							</a>
+						</div>
 					</SectionGroup>
+					<hr />
 					<SectionGroup>
 						{/* RyanUlch.com */}
 						<div className={`${classes.property} ${classes.isEven}`}>
@@ -728,13 +746,12 @@ const ResumePage = () => {
 								{[linkList("front"), linkList("resp"), linkList("strict")]}
 							</UnorderedList>
 						</div>
-						Public github link: &nbsp;
-						<a
-							className="whiteText expandLink"
-							href="https://github.com/RWACU/ryanulchsite"
-						>
-							Client
-						</a>
+						<div className={classes.githubLink}>
+							Public github link: &nbsp;
+							<a className="expandLink" href="https://github.com/RWACU/ryanulchsite">
+								Client
+							</a>
+						</div>
 					</SectionGroup>
 				</FenceBox>
 			</div>
